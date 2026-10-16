@@ -1,0 +1,29 @@
+{
+  "name": "@app/efnol-auto-flow-director",
+  "version": "1.0.0",
+  "description": "Flow Director - redirects to Auto EFNOL web app",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ace-clublabs/aws-lambda-v3": "^10.1.13",
+    "@ace-clublabs/iss-common-lambda-v3": "^10.4.14",
+    "@aws-sdk/client-secrets-manager": "3.1111.0",
+    "@lib/common-utils": "*",
+    "@lib/types": "*",
+    "aws-xray-sdk-core": "3.3.7"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.11",
+    "jest": "29.7.0",
+    "source-map-support": "^0.5.16",
+    "status-code-enum": "^1.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}

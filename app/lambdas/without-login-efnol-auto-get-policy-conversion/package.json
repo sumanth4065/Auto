@@ -1,0 +1,37 @@
+{
+  "name": "@app/without-login-efnol-auto-get-policy-conversion",
+  "version": "1.0.0",
+  "description": "Get Auto Policy Conversion lambda with anonymous token",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "3.1111.0",
+    "@ace-clublabs/aws-lambda-v3": "^10.1.13",
+    "@ace-clublabs/iss-common-lambda-v3": "^10.4.14",
+    "@ace-clublabs/aws-lambda-logger": "^10.3.2",
+    "@ace-clublabs/iss-common-auto-efnol-models": "^10.0.66",
+    "@ace-clublabs/iss-common-util": "^10.6.39",
+    "@ace-clublabs/iss-common-shared-claims-models": "^10.0.11",
+    "@ace-clublabs/feature-flags": "^1.1.16",
+    "@lib/common-utils": "*",
+    "@lib/types": "*",
+    "@lib/utility": "*",
+    "aws-xray-sdk-core": "3.3.7",
+    "jwt-decode": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "29.7.0",
+    "source-map-support": "^0.5.16",
+    "status-code-enum": "^1.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  }
+}

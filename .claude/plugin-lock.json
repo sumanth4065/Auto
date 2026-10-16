@@ -1,0 +1,325 @@
+{
+  "version": "2.5.0",
+  "files": {
+    "agents/code-reviewer.md": {
+      "owned": "plugin",
+      "hash": "cc1e526c92ba2c3896f0ec3901d52e08d6ad94bb9b938bb1458747bdbe74cbc1"
+    },
+    "agents/security-auditor.md": {
+      "owned": "plugin",
+      "hash": "78d95ed181986de27ddb67d54e3c48061a0a7c38bb86ebfc39f39e7e08e67b6a"
+    },
+    "commands/autonomous.md": {
+      "owned": "plugin",
+      "hash": "891a80c223c3f0b52ac66aea0cbf7c356a788116e0c1ac59f80b82f2fdc8e9e1"
+    },
+    "commands/fix-issue.md": {
+      "owned": "plugin",
+      "hash": "aa5eda918e0c3e1e336ebe5fca3511ae0e15bd556fbdec23daa6947c0d574369"
+    },
+    "commands/generate-release-ticket.md": {
+      "owned": "plugin",
+      "hash": "79a84b6cf0113be54c77f4bc9f0412d67116c5ef057b70d2dfb7b767a4f3f815"
+    },
+    "commands/list-deprecated-lambdas.md": {
+      "owned": "plugin",
+      "hash": "a0f5bd0b4177afc1ac2ed0b279c0e70353045d13252bba8205f7f55b6cbe0bf7"
+    },
+    "commands/generate-openapi-spec.md": {
+      "owned": "plugin",
+      "hash": "b45796d03bc90a6ffe1fb7f55e76eb633236140832cec7ed0f22923a27cedc31"
+    },
+    "commands/generate-architecture.md": {
+      "owned": "plugin",
+      "hash": "de8243a6481ddf9386bd606af097132d1ec53cb1b7ae628119f143fc3dcf95f5"
+    },
+    "commands/generate-readme.md": {
+      "owned": "plugin",
+      "hash": "7221cc278c564438b149f2648c692366b99dc5bcb76c0ab15b8916b3a1226a4f"
+    },
+    "commands/snyk-fix.md": {
+      "owned": "plugin",
+      "hash": "c7b6e15b39e8a391f050b403ff86174097df279b1ce7de45d5936c7db7c22093"
+    },
+    "commands/wiz-fix.md": {
+      "owned": "plugin",
+      "hash": "4cb9edc85856a92283337aa6b99f3da9b7c4fdc5ca9128da1e7b6c0b09d60391"
+    },
+    "wiz-fix-workflow.md": {
+      "owned": "plugin",
+      "hash": "fc1336e92e41196148d6297eee0ea013ebfe0c6d9077f254bcf60f154ad8caae"
+    },
+    "commands/review.md": {
+      "owned": "plugin",
+      "hash": "c77f5493612146c6a75a2826caf865ed49b443734837f187e60e6f0a94d31543"
+    },
+    "hooks/validate-bash.sh": {
+      "owned": "plugin",
+      "hash": "1685805f95c977443d1cc28e39a18d517b6b4a3d4b1f88b217161079d7fc3d0b"
+    },
+    "hooks/format-check.sh": {
+      "owned": "plugin",
+      "hash": "ebdc68a885aa236ce57813a1bbbea186fc77325696d587f2fafe75614ae6f98d"
+    },
+    "hooks/registry-guard.sh": {
+      "owned": "plugin",
+      "hash": "a97efc73e7f6867370003a78a64b8043ced52482eb22a9a8244de8549cc2b4b0"
+    },
+    "hooks/commit-push-guard.sh": {
+      "owned": "plugin",
+      "hash": "2111004882c68997f7e5a91f2db2c7f4a4a8ddaf5ba6263f55dbec3e657e1d8c"
+    },
+    "rules/plugin-branch-push.md": {
+      "owned": "plugin",
+      "hash": "4060e7bb68bc47843ced04ab430d5531833ea9d2045333a338246b1862c3efae"
+    },
+    "rules/autonomous-mode.md": {
+      "owned": "plugin",
+      "hash": "9c83b439885f7dd397f593678f443d0efd17ccb65d1d7b0859419e784952120c"
+    },
+    "skills/registry-guard/SKILL.md": {
+      "owned": "plugin",
+      "hash": "627274e64f2cd4a519968b26bab9848b581cffa1045d9e926e4946211c19970c"
+    },
+    "skills/add-artifact/SKILL.md": {
+      "owned": "plugin",
+      "hash": "8d5d7d0b4eae01de45a0c6633d06be95322a928cd5623d22225743ab58eac491"
+    },
+    "skills/get-test-policy/SKILL.md": {
+      "owned": "plugin",
+      "hash": "64c53f7fa5cdf900708761aa9ab84252d42f69ce68e394f0d52242dae059882d"
+    },
+    "skills/safe-deploy-web/SKILL.md": {
+      "owned": "plugin",
+      "hash": "e0b6e8ae369c9411e3aa6e9e9c49c5eca95f26a72aa9446839d80f8985729c8e"
+    },
+    "skills/safe-deploy-api/SKILL.md": {
+      "owned": "plugin",
+      "hash": "544bce469b826e3ca5bd7bf191df611e6f940a0eec2ebd7da645742c091344f0"
+    },
+    "skills/test-coverage/SKILL.md": {
+      "owned": "plugin",
+      "hash": "0e8a767e08e768dd0c2d42a610a213fc9565d50e4fb2e44f70f7c298fd1a693e"
+    },
+    "skills/gw-api/SKILL.md": {
+      "owned": "plugin",
+      "hash": "d255b27290e23cb2e6711b9ab7d7d43f88bbbb5bb418c12aa7ae3a7c736874ab"
+    },
+    "skills/snyk-build-report/SKILL.md": {
+      "owned": "plugin",
+      "hash": "5e7a69419413736b4fca026d7f9943f72952328dae3a2d63f4cbacac77621391"
+    },
+    "skills/jira-clone-ticket/SKILL.md": {
+      "owned": "plugin",
+      "hash": "6894f18f4b8de0ae776b94eb11ce47aa898056a03d550b6db092076779142afc"
+    },
+    "skills/snyk-jira-report/SKILL.md": {
+      "owned": "plugin",
+      "hash": "a989bb91cea45a4e4a0e16cf719b341c409a882493a9f0d5c22efd42b12afc08"
+    },
+    "skills/wiz-jira-report/SKILL.md": {
+      "owned": "plugin",
+      "hash": "370a71c8fbb705588cd41dd5568c69b9bc9b371ab05a9a4c12911390651ca223"
+    },
+    "skills/eval-skill/SKILL.md": {
+      "owned": "plugin",
+      "hash": "cbc76b02138ef7076c605a6456c6d2e5c4369b1f70e358a103eaf49394b532ea"
+    },
+    "skills/eval-skill/FIXTURE_FORMAT.md": {
+      "owned": "plugin",
+      "hash": "23393b6518c033ee77ec8ce0180a50cc3c6aeefd55055e2a65b2972ad1099d6f"
+    },
+    "skills/eval-skill/agents/executor.md": {
+      "owned": "plugin",
+      "hash": "00182c73a2539b3b1f2700938df1da51051e9525308ccd0c3aeacc63d12e83bf"
+    },
+    "skills/eval-skill/agents/judge.md": {
+      "owned": "plugin",
+      "hash": "422989fb66236954d4af0a6630f674d0a902bf5f5bf99f2be74731755e83f72c"
+    },
+    "skills/test-coverage/fixtures/01-discovers-all-packages.md": {
+      "owned": "plugin",
+      "hash": "23c98a38e6c1ea6e9518851cd939b430cd389ab02d68f783e982b8d8212386f6"
+    },
+    "skills/test-coverage/fixtures/02-configures-vitest-thresholds.md": {
+      "owned": "plugin",
+      "hash": "acf6bc2662f4dc24e6e9f4196c0d2222be17185b688b3d1ded14de85d2f49d42"
+    },
+    "skills/test-coverage/fixtures/03-does-not-lower-existing-threshold.md": {
+      "owned": "plugin",
+      "hash": "ac7161b383e50a458f6cab2eec6595c1a3261a86f782e1fd98b35328698244dd"
+    },
+    "skills/test-coverage/fixtures/04-documents-lowered-threshold.md": {
+      "owned": "plugin",
+      "hash": "3900021a117e83c13c208a51395a78e8b027100e98f109bfe02ea61d123fc1ea"
+    },
+    "skills/test-coverage/fixtures/05-ci-coverage-flag-enforced.md": {
+      "owned": "plugin",
+      "hash": "8d8b2fab4b4978da3cfe7eaed045468f6b58ebb429e7213cc21ac8a783a3de85"
+    },
+    "skills/upgrade-dependencies/SKILL.md": {
+      "owned": "plugin",
+      "hash": "16a28cc353538a8be965d54e5c7a3d9eae18379e02d207703d6172a462032bf3"
+    },
+    "skills/upgrade-dependencies/fixtures/01-clean-react-upgrade.md": {
+      "owned": "plugin",
+      "hash": "7b50990e3b42e95057503e5950cb943fa54b33b41de6b2a945c1b478ffc69462"
+    },
+    "skills/upgrade-dependencies/fixtures/02-peer-conflict-triage.md": {
+      "owned": "plugin",
+      "hash": "cc8177f95963ffedba43827f19402d3d687bdbc07f9aae4f7788b373890a5a78"
+    },
+    "skills/upgrade-dependencies/fixtures/03-node-lambda-cdk-upgrade.md": {
+      "owned": "plugin",
+      "hash": "7f06fd999f3c5a7de7a34fcd20570e7415fede856ae227e294e94dde6cfa0ede"
+    },
+    "skills/upgrade-dependencies/fixtures/04-typescript-compile-errors.md": {
+      "owned": "plugin",
+      "hash": "f036a4d405995d9c78b851b5e437533fe980cb69e94d7daebb1697721db215f4"
+    },
+    "scripts/get-asset-version/get-asset-versions.sh": {
+      "owned": "plugin",
+      "hash": "a6e8a4a4222e5fa30799a611038654af76cb9e20af6426c4cc4eb116759dd801"
+    },
+    "scripts/get-asset-version/list-assets.js": {
+      "owned": "plugin",
+      "hash": "66a8502e8c12ecf68ceea9dd587f72b1095688a85e3eecc8950037be1df81119"
+    },
+    "scripts/get-asset-version/list-tickets.js": {
+      "owned": "plugin",
+      "hash": "4ecb89c82293a4633ada20c9dd505850b588f5d7325387ab84526e38ad2d3829"
+    },
+    "scripts/get-jira-release-summary/get-jira-release-summary.sh": {
+      "owned": "plugin",
+      "hash": "bd66b8d44a90e7fe895cb93431b5b08e7c20f26755a2f363709c3aba0cd490fa"
+    },
+    "scripts/bedrock-usage/bedrock-usage.py": {
+      "owned": "plugin",
+      "hash": "aab85549b1b8fbbe09e7467c90816eff35b3d374799a50b087fa1a3e9abd81bd"
+    },
+    "scripts/bedrock-usage/status-aggregator.sh": {
+      "owned": "plugin",
+      "hash": "752ef15fe4fcdd8e58cd011d53e5df2746a6237b8b99838b5cc78f6dc5152cfd"
+    },
+    "scripts/bedrock-usage/01-bedrock-usage.sh": {
+      "owned": "plugin",
+      "hash": "b15ef50994989a357e8c0bb7d992040f896e30ecbf6de4f32aab4ffdc6ca31cd"
+    },
+    "skills/statusline-setup/SKILL.md": {
+      "owned": "plugin",
+      "hash": "b11b1f7730a4b8c3f274c18393f4fbcec3bf9a3050c5b14d6bb79a274dd62b9c"
+    },
+    "skills/setup-splunk-apm-rum/SKILL.md": {
+      "owned": "plugin",
+      "hash": "0891dd5de6e3b8769717b74ed16f088e004dc9e12a5571f5ee20586ce2489e6f"
+    },
+    "skills/sdd-planning/SKILL.md": {
+      "owned": "plugin",
+      "hash": "878a335b10ad034e0f57573f713a9125e2d2967e0bbee176e24ad090a4e29782"
+    },
+    "skills/sdd-planning/agents/artifact_review.md": {
+      "owned": "plugin",
+      "hash": "80fe404d9ef5050a919c29f0ecd4a2fb44a58ba410b02b4fec1cb6a762fd2693"
+    },
+    "skills/sdd-planning/agents/spec_compose.md": {
+      "owned": "plugin",
+      "hash": "2db0d502cb8a795868b58f2b55a58f4803fdb1d618528f0add6e87b25728d9cb"
+    },
+    "skills/sdd-planning/agents/requirements_compose.md": {
+      "owned": "plugin",
+      "hash": "5fbbe0bdef216ce70711253a034cfa35fb7e3c8f001ade3d294c2cbfe9c5f9b9"
+    },
+    "skills/sdd-planning/agents/_contract.md": {
+      "owned": "plugin",
+      "hash": "cd94f450663b777940a8b955ef941e4506f864e3afca2cf718d3f13b6fea3cb7"
+    },
+    "skills/sdd-planning/agents/_ta-structure.md": {
+      "owned": "plugin",
+      "hash": "73f89f367a5bfb057e4579f905b525a25579641b70ea6b9e9c1fdce7b6f18a83"
+    },
+    "skills/sdd-planning/agents/_ip-structure.md": {
+      "owned": "plugin",
+      "hash": "05ecdc39096466fb9815b558792327d474e4236bb22a524c62aee48fd1dabec3"
+    },
+    "skills/sdd-planning/agents/_phase-structure.md": {
+      "owned": "plugin",
+      "hash": "2d8556e7f4738b3ca454c727845229642e55588d678d166426668f31145237af"
+    },
+    "skills/sdd-planning-content/SKILL.md": {
+      "owned": "plugin",
+      "hash": "32505229580974d59b78cd2439fc1b0d603b1418938ef3927f6cd0e717e75c83"
+    },
+    "skills/sdd-planning-config/SKILL.md": {
+      "owned": "plugin",
+      "hash": "fc45aa8263728c5b2fb2d9d1eae406e685be720423000f7e76e3fc1ccafa8da1"
+    },
+    "skills/sdd-planning-discover/SKILL.md": {
+      "owned": "plugin",
+      "hash": "ba25a3abdece9854ff2f4c206b48717cd04d0a76a32132ee6eea49824ba728ce"
+    },
+    "skills/sdd-planning-setup/SKILL.md": {
+      "owned": "plugin",
+      "hash": "5f93305abca80817b891d7b4d1a093f187e3954ddad0ed23d8665510598b0a27"
+    },
+    "skills/GLOSSARY.md": {
+      "owned": "plugin",
+      "hash": "1475830870e6c1170ba6820c1e8273dd38f1f92c2792bfa202c1e69d473f33a0"
+    },
+    "hooks/sdd-guard.sh": {
+      "owned": "plugin",
+      "hash": "aad11aef14a953c715c681532b1a4cad5cff001d5b22d403a46bc9f9e22f9ebf"
+    },
+    "scripts/sdd-install/sdd-install.sh": {
+      "owned": "plugin",
+      "hash": "6cc173f0fa77267fe665a527904f5efa67fe21f517f1d88f5034247c16aed516"
+    },
+    "workflows/security-scan.js": {
+      "owned": "plugin",
+      "hash": "0020e5e0f3d6c6e0de543b58f54245c7a39c95487dd2deb0a42e7027778c92cd"
+    },
+    "workflows/team-presets.js": {
+      "owned": "plugin",
+      "hash": "94bf34fce56c9a2094145657f2bff0f92b0e12bf8d0a7156a71bc0f3d354c624"
+    },
+    "settings.json": {
+      "owned": "project",
+      "hash": "bfe6bf96c0a3d32f6db4b1fb28f1fd6f92836aea17d0acfdf62f26520eaf4ac4"
+    },
+    "rules/code-style.md": {
+      "owned": "project",
+      "hash": "29855597c527fdf1bbe18370af38090de6444557944e21b8150d17235f564ac4"
+    },
+    "rules/testing.md": {
+      "owned": "project",
+      "hash": "91255fb429ddab02d2a99472e3780b253a5025d476f70fb88e386c93c6d657bf"
+    },
+    "rules/api-conventions.md": {
+      "owned": "project",
+      "hash": "14928e23c76d2af33eedd02fac6b11b837b7599b469b49ed9caf1bf84e987bf3"
+    },
+    "skills/deploy/SKILL.md": {
+      "owned": "project",
+      "hash": "5020cdc2c0c2878beda51fdae1da5d678df0793f79ca25e83942ba3dca40f56f"
+    },
+    "skills/deploy/deploy-config.md": {
+      "owned": "project",
+      "hash": "f908e97d295ce2da76de870e611a9b128eb230ee9efff56e9deb7ff057aab7b5"
+    },
+    "skills/wiz-jira-report/team-epic-map.md": {
+      "owned": "project",
+      "hash": "f3c010e86ad9edbb7d3ad2689b34c521170765a467d464d44a7de1a4ecaca55d"
+    },
+    "skills/find-orphaned-stacks/SKILL.md": {
+      "owned": "plugin",
+      "hash": "b43ce34450993da2b33312ce81b0d57a499c1c0b91e8dfd46178b8d02feba19d"
+    },
+    "skills/wiz-confused-deputy/SKILL.md": {
+      "owned": "plugin",
+      "hash": "7b6449c3d23829038c429446186e50d098dfef963f5b047c49844c815e87557a"
+    },
+    "skills/cloudwatch-lambda-logs/SKILL.md": {
+      "owned": "plugin",
+      "hash": "bf93a91123b943bd361014ac34a7f1f93d85e65e4c7912ea7d8c12e10318e79c"
+    }
+  }
+}

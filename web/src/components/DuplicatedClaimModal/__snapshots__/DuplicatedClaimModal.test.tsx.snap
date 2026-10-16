@@ -1,0 +1,227 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DuplicatedClaimModal > renders Modal and assert modal content 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    style="padding-right: 1024px; overflow: hidden;"
+  >
+    <div
+      aria-hidden="true"
+    />
+    <div
+      class="MuiDialog-root SclModal MuiDialogSize-small MuiDialogVariant-regular MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"
+      data-quid="SCL-Modal"
+      id="modal-duplicate-claim"
+      role="presentation"
+    >
+      <div
+        aria-hidden="true"
+        class="MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"
+        style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+      />
+      <div
+        data-testid="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"
+        role="presentation"
+        style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+        tabindex="-1"
+      >
+        <div
+          aria-describedby="modal-content-1"
+          aria-labelledby="modal-title-1"
+          aria-modal="true"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialogPaperSize-small MuiDialogPaperVariant-regular undefined css-10d30g3-MuiPaper-root-MuiDialog-paper"
+          data-mui-focusable=""
+          role="dialog"
+          style="--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"
+          tabindex="-1"
+        >
+          <div
+            class="MuiDialogContent-root css-kw13he-MuiDialogContent-root"
+            data-quid="SCL-ModalContent"
+            id="modal-content-1"
+          >
+            <div
+              class="SclBox undefined MuiBox-root css-1obf64m"
+              data-quid="SCL-Box"
+            >
+              <div
+                class="MuiBox-root css-1bxpz3e"
+                data-quid="SCL-ModalContentFadeGradientBackground"
+              />
+            </div>
+            <div
+              class="SclBox undefined MuiBox-root css-79elbk"
+              data-quid="SCL-Box"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root SclModalTitle css-1asv19e-MuiTypography-root-MuiDialogTitle-root"
+                data-quid="SCL-ModalTitle"
+                id="modal-title-1"
+              >
+                We found an existing claim on the selected date
+              </h2>
+              <button
+                aria-label="Close"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium SclIconButton MuiModalCloseIconButton css-i80vc7-MuiButtonBase-root-MuiIconButton-root"
+                data-quid="SCL-IconButton"
+                id="closeButton"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </button>
+            </div>
+            <span
+              class="MuiTypography-root MuiTypography-b1Regular SclTypography css-z2uw0f-MuiTypography-root"
+            >
+              If you need information about your existing claim 
+              <strong>
+                some-claim-number
+              </strong>
+              ,
+               
+              please contact us using the email address or phone number below.
+            </span>
+            <div
+              class="SclBox undefined MuiBox-root css-bfnq1e"
+              data-quid="SCL-Box"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b1Bold SclTypography css-248op7-MuiTypography-root"
+              >
+                Claims Service Representative
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography css-248op7-MuiTypography-root"
+                data-qm-block="true"
+              >
+                Name: 
+                some-display-name-adjuster
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography css-z2uw0f-MuiTypography-root"
+                data-qm-block="true"
+              >
+                Email:
+                 
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways SclLink undefined css-1orsvah-MuiTypography-root-MuiLink-root"
+                  data-quid="SCL-Link"
+                  href="mailto:ClaimsDocuments@ace.aaa.com"
+                  target="_blank"
+                >
+                  ClaimsDocuments@ace.aaa.com
+                </a>
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography css-z2uw0f-MuiTypography-root"
+                data-qm-block="true"
+              >
+                Phone:
+                 
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways SclLink undefined css-1orsvah-MuiTypography-root-MuiLink-root"
+                  data-quid="SCL-Link"
+                  href="tel:11112223333"
+                  target="_blank"
+                >
+                  1-111-222-3333
+                </a>
+                 (ext. 1234)
+              </span>
+            </div>
+          </div>
+          <div
+            class="MuiDialogActions-root SclModalActions MuiDialogActions-fullWidth css-1jtz0jk-MuiDialogActions-root"
+            data-quid="SCL-ModalActions"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth SclButton SclModalActionButton MuiDialogActionButton MuiDialogActionButton-fullWidth css-14vdjio-MuiButtonBase-root-MuiButton-root"
+              data-quid="SCL-ModalActionButton"
+              id="goBackButton"
+              tabindex="0"
+              type="button"
+            >
+              Go back to home
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth SclButton SclModalActionButton MuiDialogActionButton MuiDialogActionButton-fullWidth css-1k9hkw1-MuiButtonBase-root-MuiButton-root"
+              data-quid="SCL-ModalActionButton"
+              id="continueButton"
+              tabindex="0"
+              type="button"
+            >
+              Select a different date
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

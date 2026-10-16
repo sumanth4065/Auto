@@ -1,0 +1,280 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Who Is Reporting It > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <h5
+          class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+        >
+          Who is reporting the claim?
+        </h5>
+        <form
+          autocomplete="off"
+          class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+          data-quid="SCL-Box"
+          novalidate=""
+        >
+          <div
+            class="SclBox undefined MuiBox-root css-1obf64m"
+            data-quid="SCL-Box"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl SclSelect MuiSelectFormControl undefined css-1u26s0u-MuiFormControl-root"
+              data-quid="SCL-FormControl"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined SclInputLabel undefined css-1g1k4q0-MuiFormLabel-root-MuiInputLabel-root"
+                data-quid="SCL-InputLabel"
+                data-shrink="false"
+                id=":r1:"
+              >
+                Select the reporter
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-i8fszj-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                data-qm-block="true"
+                required=""
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-labelledby=":r1:"
+                  aria-required="true"
+                  class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1d4o4uq-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                  role="combobox"
+                  tabindex="0"
+                >
+                  <div
+                    class="SclBox MuiSelect-placeholder MuiBox-root css-0"
+                    data-quid="SCL-Box"
+                  >
+                    Select one
+                  </div>
+                </div>
+                <input
+                  aria-hidden="true"
+                  aria-invalid="false"
+                  class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                  required=""
+                  tabindex="-1"
+                  value=""
+                />
+                <div
+                  class="SclBox MuiSelect-icon MuiSelect-iconOutlined MuiBox-root css-18mih9r-MuiNativeSelect-root-MuiSelect-icon"
+                  data-quid="SCL-Box"
+                >
+                  <svg
+                    class="SCL-Icon SclIcon MuiSelect-icon"
+/>
+                </div>
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-ex8a5f-MuiNotchedOutlined-root"
+                  >
+                    <span>
+                      Select the reporter
+                       
+                      *
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained SclFormHelperText undefined css-1mcrxa8-MuiFormHelperText-root"
+                data-quid="SCL-FormHelperText"
+              >
+                <div
+                  class="MuiBox-root css-1obf64m"
+                  data-quid="SCL-TextFieldHelperText"
+                />
+              </p>
+            </div>
+          </div>
+          <div
+            class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+            data-quid="SCL-Box"
+          >
+            <button
+              aria-disabled="true"
+              class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              id="next-button"
+              tabindex="-1"
+              type="submit"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        Who is reporting the claim?
+      </h5>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="SclBox undefined MuiBox-root css-1obf64m"
+          data-quid="SCL-Box"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl SclSelect MuiSelectFormControl undefined css-1u26s0u-MuiFormControl-root"
+            data-quid="SCL-FormControl"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined SclInputLabel undefined css-1g1k4q0-MuiFormLabel-root-MuiInputLabel-root"
+              data-quid="SCL-InputLabel"
+              data-shrink="false"
+              id=":r1:"
+            >
+              Select the reporter
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-i8fszj-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+              data-qm-block="true"
+              required=""
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby=":r1:"
+                aria-required="true"
+                class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1d4o4uq-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                role="combobox"
+                tabindex="0"
+              >
+                <div
+                  class="SclBox MuiSelect-placeholder MuiBox-root css-0"
+                  data-quid="SCL-Box"
+                >
+                  Select one
+                </div>
+              </div>
+              <input
+                aria-hidden="true"
+                aria-invalid="false"
+                class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                required=""
+                tabindex="-1"
+                value=""
+              />
+              <div
+                class="SclBox MuiSelect-icon MuiSelect-iconOutlined MuiBox-root css-18mih9r-MuiNativeSelect-root-MuiSelect-icon"
+                data-quid="SCL-Box"
+              >
+                <svg
+                  class="SCL-Icon SclIcon MuiSelect-icon"
+/>
+              </div>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Select the reporter
+                     
+                    *
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained SclFormHelperText undefined css-1mcrxa8-MuiFormHelperText-root"
+              data-quid="SCL-FormHelperText"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              />
+            </p>
+          </div>
+        </div>
+        <div
+          class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+          data-quid="SCL-Box"
+        >
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

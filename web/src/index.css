@@ -1,0 +1,69 @@
+html {
+  --background-color: white;
+  --padding-x-axis: 1rem;
+  --cindy-padding-x-axis: 0px;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.header {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 0.5rem;
+  }
+}
+.content {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--padding-x-axis);
+  padding-right: var(--padding-x-axis);
+  padding-bottom: 0.5rem;
+}
+.content-cindy {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: var(--cindy-padding-x-axis);
+  padding-right: var(--cindy-padding-x-axis);
+}
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2%;
+  z-index: 999;
+}
+
+.Mui-Cindy-Icon-Box-root {
+  margin-bottom: -0.5rem;
+}
+
+.when-incident.time-picker button.SclIconButton {
+  margin-top: 1rem;
+}
+
+.MuiMultiSectionDigitalClock-root ul.MuiList-root {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.MuiMultiSectionDigitalClock-root ul.MuiList-root::-webkit-scrollbar {
+  display: none;
+}
+
+.MuiMenuItem-root.MuiMenuItem-divider.MuiMenuItem-action {
+  background-color: #faf8f4;
+}
+
+.transition-container {
+  background-color: #faf8f4;
+}

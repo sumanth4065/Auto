@@ -1,0 +1,163 @@
+# This is a basic workflow to help you get started with trigger
+name: Web Build Pipeline
+
+on:
+  workflow_dispatch: # This allows the workflow to be triggered via the API
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '@lib/**'
+      - '.github/workflows/build-pipeline-web.yml'
+
+env:
+  AWS_REGION: us-west-2 #Change to reflect your Region
+  GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+  WORKLOAD: insurance-claims
+
+# Permission can be added at job level or workflow level
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: write # This is required for actions/checkout
+  packages: read # This is required for actions/checkout
+
+jobs:
+  BuildPipeline:
+    runs-on: ubuntu-latest
+    outputs:
+      VersionTag: ${{ steps.version.outputs.VERSION_TAG}}
+      VersionNumber: ${{ steps.version.outputs.VERSION_NUMBER}}
+      PreviousVersionNumber: ${{ steps.version.outputs.LAST_VERSION_TAG}}
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v6
+        with:
+          fetch-tags: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com/
+          scope: '@ace-clublabs'
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::910727532400:role/${{env.WORKLOAD}}-github-build-role #nonprod-cicd role pushing to built artifacts
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Get Version
+        id: version
+        run: |
+          echo "[IAM Role Used]"
+          aws sts get-caller-identity
+          echo "(git tag | grep -E "^${{env.GITHUB_TAG_PREFIX}}-[0-9]" | sort -V | tail -1)"
+          echo "[Getting scripts from s3]"
+          aws s3 cp s3://cloud-ops-tools/increment-version.sh increment-version.sh
+          chmod a+x ./increment-version.sh
+          echo "[Getting tags]"
+          LAST_VERSION_TAG=$(git tag | grep -E "^${{env.GITHUB_TAG_PREFIX}}-[0-9]" | sort -V | tail -1)
+          echo "LAST_VERSION_TAG=$LAST_VERSION_TAG" >> $GITHUB_OUTPUT
+          LAST_VERSION_TAG=${LAST_VERSION_TAG:-"${{env.GITHUB_TAG_PREFIX}}-0.0.0.0"}
+          echo $LAST_VERSION_TAG >> LAST_VERSION_TAG
+          VERSION_TAG=$(./increment-version.sh $LAST_VERSION_TAG patch)
+          prefix=${{env.GITHUB_TAG_PREFIX}}
+          VERSION_NUMBER=${VERSION_TAG:$((${#prefix} + 1))}
+          echo "[Version Tag: $VERSION_TAG]"
+          echo "[Version Number: $VERSION_NUMBER]"
+          echo "[Last Version Tag: $LAST_VERSION_TAG]"
+          echo "[Setting Tags for Github Actions]"
+          echo "VERSION_TAG=$VERSION_TAG" >> $GITHUB_OUTPUT
+          echo "VERSION_NUMBER=$VERSION_NUMBER" >> $GITHUB_OUTPUT
+      - name: Build And Package
+        id: build
+        env:
+          NPM_TOKEN: ${{secrets.GH_TEAMS_TOKEN}}
+          ENTERPRISE_NPM_TOKEN: ${{secrets.ENTERPRISE_NPM_TOKEN}}
+          VITE_HARNESS_CLIENT_SECRET_ID_DEV: ${{secrets.HARNESS_CLIENT_SECRET_ID_DEV}}
+          VITE_HARNESS_CLIENT_SECRET_ID_QA: ${{secrets.HARNESS_CLIENT_SECRET_ID_QA}}
+          VITE_HARNESS_CLIENT_SECRET_ID_UAT: ${{secrets.HARNESS_CLIENT_SECRET_ID_UAT}}
+          VITE_HARNESS_CLIENT_SECRET_ID_PROD: ${{secrets.HARNESS_CLIENT_SECRET_ID_PROD}}
+          VERSION_NUMBER: $VERSION_NUMBER
+        run: |
+          echo "[Install phase]"
+          yarn
+          yarn build-web-silent
+          yarn test-web-silent
+          echo "[Build phase]"
+          echo "[Version Index.Html phase]"
+          echo ${{steps.version.outputs.VERSION_NUMBER}}
+          cd web/dist
+          sed -i -- "s/%VERSION%/${{steps.version.outputs.VERSION_NUMBER}}/g" ./index.html
+          zip -r ../../${{steps.version.outputs.VERSION_TAG}}.zip .
+          cd ..
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{steps.version.outputs.VERSION_TAG}}
+          path: ${{steps.version.outputs.VERSION_TAG}}.zip
+  UploadToS3:
+    needs: BuildPipeline
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-s3-upload.yml@main
+    with: # you cannot send ENV variables to a composite action, so we have to pass them in as inputs
+      WORKLOAD: insurance-claims
+      PROJECT_PATH: web
+      GITHUB_TAG_PREFIX: AutoEFNOLNoAuthWebsite
+      ARTIFACT_NAME: ${{ needs.BuildPipeline.outputs.VersionTag }}
+      FILE_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+  SnykScans:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-snyk-node-aws-scans.yml@main
+    needs: [BuildPipeline, UploadToS3]
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      PROJECT_PATH: web
+      NODE_VERSION: 22
+      BUILD_COMMAND: yarn build-lib && yarn build-web-snyk
+      EXECUTE_AWS_IAC: false
+      VersionTag: ${{ needs.BuildPipeline.outputs.VersionTag}}
+      SNYK_ORG_NAME: InsuranceSelfService
+      SCA_SCAN_EXCLUDES: 'infrastructure'
+      GITHUB_TAG_PREFIX: AutoEFNOLNoAuthWebsite
+  Tagging:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-tagging.yml@main
+    needs: BuildPipeline
+    with:
+      VersionTag: ${{ needs.BuildPipeline.outputs.VersionTag }}
+      VersionNumber: ${{ needs.BuildPipeline.outputs.VersionNumber }}
+  SlackNotification:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [BuildPipeline, Tagging, UploadToS3]
+    secrets: inherit
+    if: ${{ always() }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web AutoEFNOLNoAuthWebsite-${{ needs.BuildPipeline.outputs.VersionNumber }} Build Pipeline'
+      Status: >-
+        "${{ needs.BuildPipeline.result }}" == "failure" ||
+        "${{ needs.BuildPipeline.result }}" == "skipped" ||
+        "${{ needs.Tagging.result }}" == "failure" ||
+        "${{ needs.Tagging.result }}" == "skipped" ||
+        "${{ needs.UploadToS3.result }}" == "failure" ||
+        "${{ needs.UploadToS3.result }}" == "skipped"
+  TriggerDeploy:
+    name: Trigger Deploy Web Pipeline V2
+    if: github.ref == 'refs/heads/main'
+    needs: [BuildPipeline, UploadToS3, SnykScans, Tagging]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write # required to trigger workflow_dispatch
+    steps:
+      - name: Trigger Deploy Web Pipeline V2 by name (workflow_dispatch)
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-pipeline-web.yml',
+              ref: 'main',
+              inputs: {
+                APP_VERSION: '${{ needs.BuildPipeline.outputs.VersionNumber }}'
+              }
+            });

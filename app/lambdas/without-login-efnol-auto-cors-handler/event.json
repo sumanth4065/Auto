@@ -1,0 +1,129 @@
+{
+  "resource": "/test-apigw-corshandler",
+  "path": "/app-base-path/test-apigw-corshandler",
+  "httpMethod": "OPTIONS",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Access-Control-Request-Headers": "content-type",
+    "Access-Control-Request-Method": "POST",
+    "Cache-Control": "no-cache",
+    "Host": "api.qa.clublabs.net",
+    "Incap-Client-IP": "47.148.180.196",
+    "Incap-Proxy-663": "OK",
+    "Incap-Proxy-978": "OK",
+    "Origin": "http://localhost:3001",
+    "Pragma": "no-cache",
+    "Referer": "http://localhost:3001/recoverpassword/verifybirthdate/123",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "cross-site",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-5f5fe652-766b194efbc815e61a596c9c",
+    "X-Forwarded-For": "47.148.180.196, 198.143.46.221",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "http"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate, br"
+    ],
+    "Accept-Language": [
+      "en-US,en;q=0.9"
+    ],
+    "Access-Control-Request-Headers": [
+      "content-type"
+    ],
+    "Access-Control-Request-Method": [
+      "POST"
+    ],
+    "Cache-Control": [
+      "no-cache"
+    ],
+    "Host": [
+      "api.qa.clublabs.net"
+    ],
+    "Incap-Client-IP": [
+      "47.148.180.196"
+    ],
+    "Incap-Proxy-663": [
+      "OK"
+    ],
+    "Incap-Proxy-978": [
+      "OK"
+    ],
+    "Origin": [
+      "http://localhost:3001"
+    ],
+    "Pragma": [
+      "no-cache"
+    ],
+    "Referer": [
+      "http://localhost:3001/recoverpassword/verifybirthdate/123"
+    ],
+    "Sec-Fetch-Dest": [
+      "empty"
+    ],
+    "Sec-Fetch-Mode": [
+      "cors"
+    ],
+    "Sec-Fetch-Site": [
+      "cross-site"
+    ],
+    "User-Agent": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-5f5fe652-766b194efbc815e61a596c9c"
+    ],
+    "X-Forwarded-For": [
+      "47.148.180.196, 198.143.46.221"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "ksd8w2",
+    "resourcePath": "/test-apigw-corshandler",
+    "httpMethod": "OPTIONS",
+    "extendedRequestId": "S4Ds3FiZPHcF5mQ=",
+    "requestTime": "14/Sep/2020:21:53:22 +0000",
+    "path": "/app-base-path/test-apigw-corshandler",
+    "accountId": "443323403285",
+    "protocol": "HTTP/1.1",
+    "stage": "deploy",
+    "domainPrefix": "api",
+    "requestTimeEpoch": 1600120402293,
+    "requestId": "20b00d70-18a3-4158-98e8-c9f971316efb",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "198.143.46.221",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36",
+      "user": null
+    },
+    "domainName": "api.qa.clublabs.net",
+    "apiId": "gkusvwo6p"
+  },
+  "body": null,
+  "isBase64Encoded": false
+}

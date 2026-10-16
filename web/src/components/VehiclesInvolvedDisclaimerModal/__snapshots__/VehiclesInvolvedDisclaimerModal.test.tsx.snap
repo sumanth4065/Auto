@@ -1,0 +1,146 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VehiclesInvolvedDisclaimerModal > renders Modal and assert modal content 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    style="padding-right: 1024px; overflow: hidden;"
+  >
+    <div
+      aria-hidden="true"
+    />
+    <div
+      class="MuiDialog-root SclModal MuiDialogSize-small MuiDialogVariant-regular MuiModal-root css-1424xw8-MuiModal-root-MuiDialog-root"
+      data-quid="SCL-Modal"
+      id="modal-vehicles-involved-disclaimer"
+      role="presentation"
+    >
+      <div
+        aria-hidden="true"
+        class="MuiBackdrop-root MuiModal-backdrop MuiDialog-backdrop css-1cennmq-MuiBackdrop-root-MuiDialog-backdrop"
+        style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+      />
+      <div
+        data-testid="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiDialog-container MuiDialog-scrollPaper css-19do60a-MuiDialog-container"
+        role="presentation"
+        style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+        tabindex="-1"
+      >
+        <div
+          aria-describedby="modal-content-1"
+          aria-labelledby="modal-title-1"
+          aria-modal="true"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialogPaperSize-small MuiDialogPaperVariant-regular undefined css-10d30g3-MuiPaper-root-MuiDialog-paper"
+          data-mui-focusable=""
+          role="dialog"
+          style="--Paper-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);"
+          tabindex="-1"
+        >
+          <div
+            class="MuiDialogContent-root css-kw13he-MuiDialogContent-root"
+            data-quid="SCL-ModalContent"
+            id="modal-content-1"
+          >
+            <div
+              class="SclBox undefined MuiBox-root css-1obf64m"
+              data-quid="SCL-Box"
+            >
+              <div
+                class="MuiBox-root css-1bxpz3e"
+                data-quid="SCL-ModalContentFadeGradientBackground"
+              />
+            </div>
+            <span
+              class="MuiTypography-root MuiTypography-b1Regular SclTypography css-z2uw0f-MuiTypography-root"
+            >
+              A claims representative will contact you to gather details about the other vehicles once the claim is filed. Select OK to continue filling a claim.
+            </span>
+          </div>
+          <div
+            class="MuiDialogActions-root MuiDialogActions-spacing SclModalActions MuiDialogActions-rightAlign css-15fu35s-MuiDialogActions-root"
+            data-quid="SCL-ModalActions"
+          >
+            <div
+              class="SclBox undefined MuiBox-root css-1obf64m"
+              data-quid="SCL-Box"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary SclButton SclModalActionButton MuiDialogActionButton MuiDialogActionButton-rightAlign css-74d805-MuiButtonBase-root-MuiButton-root"
+                data-quid="SCL-ModalActionButton"
+                id="okButton"
+                style="width: 1px;"
+                tabindex="0"
+                type="button"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-testid="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

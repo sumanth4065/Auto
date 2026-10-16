@@ -1,0 +1,12 @@
+.radio {
+  margin: 0 5rem 0 0 !important;
+}
+
+.radiogroup {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}

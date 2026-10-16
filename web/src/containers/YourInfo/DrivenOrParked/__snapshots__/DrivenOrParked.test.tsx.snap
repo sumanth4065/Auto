@@ -1,0 +1,278 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DrivenOrParked > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <h5
+          class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+        >
+          Was someone driving or was the car parked during the incident?
+        </h5>
+        <div
+          style="margin: 1.5rem 0px;"
+        >
+          <form
+            autocomplete="off"
+            class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+            data-quid="SCL-Box"
+            novalidate=""
+          >
+            <div
+              style="flex-direction: column; display: flex; gap: 15px;"
+            >
+              <div
+                class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl SCL-RadioGroup MuiRadioGroup-FormControl MuiRadioGroup-FormControl-Layout-column undefined css-1u26s0u-MuiFormControl-root"
+                data-quid="SCL-FormControl"
+              >
+                <label
+                  class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiRadioGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+                  id=":r1:"
+                >
+                  Select one
+                </label>
+                <div
+                  aria-labelledby=":r1:"
+                  class="MuiFormGroup-root MuiRadioGroup-root MuiRadioGroup-root MuiRadioGroup-Layout-column MuiRadioGroup-gutter css-ht89z8-MuiFormGroup-root"
+                  role="radiogroup"
+                >
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                        id="driven-option"
+                        name=":r2:"
+                        type="radio"
+                        value="beingDriven"
+                      />
+                      <svg
+                        class="SCL-Icon SclIcon undefined"
+/>
+                    </span>
+                    <div
+                      class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                      data-quid="SCL-Stack"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-primary css-cfm9y6-MuiTypography-root"
+                        data-quid="SCL-RadioTypography"
+                      >
+                        It was being driven
+                      </p>
+                    </div>
+                  </label>
+                  <label
+                    class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+                  >
+                    <span
+                      class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+                    >
+                      <input
+                        class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                        id="parked-option"
+                        name=":r2:"
+                        type="radio"
+                        value="parked"
+                      />
+                      <svg
+                        class="SCL-Icon SclIcon undefined"
+/>
+                    </span>
+                    <div
+                      class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                      data-quid="SCL-Stack"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-primary css-cfm9y6-MuiTypography-root"
+                        data-quid="SCL-RadioTypography"
+                      >
+                        It was parked
+                      </p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <button
+                aria-disabled="true"
+                class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+                disabled=""
+                id="next-button"
+                tabindex="-1"
+                type="submit"
+              >
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        Was someone driving or was the car parked during the incident?
+      </h5>
+      <div
+        style="margin: 1.5rem 0px;"
+      >
+        <form
+          autocomplete="off"
+          class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+          data-quid="SCL-Box"
+          novalidate=""
+        >
+          <div
+            style="flex-direction: column; display: flex; gap: 15px;"
+          >
+            <div
+              class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl SCL-RadioGroup MuiRadioGroup-FormControl MuiRadioGroup-FormControl-Layout-column undefined css-1u26s0u-MuiFormControl-root"
+              data-quid="SCL-FormControl"
+            >
+              <label
+                class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiRadioGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+                id=":r1:"
+              >
+                Select one
+              </label>
+              <div
+                aria-labelledby=":r1:"
+                class="MuiFormGroup-root MuiRadioGroup-root MuiRadioGroup-root MuiRadioGroup-Layout-column MuiRadioGroup-gutter css-ht89z8-MuiFormGroup-root"
+                role="radiogroup"
+              >
+                <label
+                  class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+                >
+                  <span
+                    class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                      id="driven-option"
+                      name=":r2:"
+                      type="radio"
+                      value="beingDriven"
+                    />
+                    <svg
+                      class="SCL-Icon SclIcon undefined"
+/>
+                  </span>
+                  <div
+                    class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                    data-quid="SCL-Stack"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-primary css-cfm9y6-MuiTypography-root"
+                      data-quid="SCL-RadioTypography"
+                    >
+                      It was being driven
+                    </p>
+                  </div>
+                </label>
+                <label
+                  class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+                >
+                  <span
+                    class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                      id="parked-option"
+                      name=":r2:"
+                      type="radio"
+                      value="parked"
+                    />
+                    <svg
+                      class="SCL-Icon SclIcon undefined"
+/>
+                  </span>
+                  <div
+                    class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                    data-quid="SCL-Stack"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-primary css-cfm9y6-MuiTypography-root"
+                      data-quid="SCL-RadioTypography"
+                    >
+                      It was parked
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <button
+              aria-disabled="true"
+              class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              id="next-button"
+              tabindex="-1"
+              type="submit"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

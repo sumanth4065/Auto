@@ -1,0 +1,313 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ReviewClaimAccordion > renders properly when open is false 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters SclAccordion undefined css-1808mag-MuiPaper-root-MuiAccordion-root"
+    data-quid="SCL-Accordion"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-controls="panel-content-1"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters SclAccordionSummary MuiAccordionSummary-secondary css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root"
+        data-quid="SCL-AccordionSummary"
+        id="panel-header-1"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-b2Regular SclTypography css-z2uw0f-MuiTypography-root"
+          >
+            some accordion title 1
+          </span>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-ExpandIcon"
+/>
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-CollapseIcon"
+/>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            aria-labelledby="panel-header-1"
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            id="panel-content-1"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root SclAccordionDetails undefined css-1lj39kh-MuiAccordionDetails-root"
+              data-quid="SCL-AccordionDetails"
+            >
+              <div
+                class="MuiStack-root SclStack undefined css-pl8gqh-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-b2Regular MuiLink-root MuiLink-underlineAlways SclLink undefined css-14kwqpj-MuiTypography-root-MuiLink-root"
+                  data-quid="SCL-Link"
+                  target="_blank"
+                >
+                  Edit
+                </a>
+                <div
+                  class="MuiStack-root SclStack undefined css-nen11g-MuiStack-root"
+                  data-quid="SCL-Stack"
+                >
+                  <div
+                    class="SclBox undefined MuiBox-root css-oevwqn"
+                    data-quid="SCL-Box"
+                    id="1-driver-0"
+                  >
+                     
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Bold SclTypography css-7dik8k-MuiTypography-root"
+                    >
+                      driver: 
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Regular SclTypography css-1oii3j5-MuiTypography-root"
+                      data-qm-block="false"
+                    >
+                      some-description
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ReviewClaimAccordion > renders properly when open is true 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters SclAccordion undefined css-1808mag-MuiPaper-root-MuiAccordion-root"
+    data-quid="SCL-Accordion"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-controls="panel-content-1"
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters SclAccordionSummary MuiAccordionSummary-secondary css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root"
+        data-quid="SCL-AccordionSummary"
+        id="panel-header-1"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-b2Regular SclTypography css-z2uw0f-MuiTypography-root"
+          >
+            some accordion title 2
+          </span>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-ExpandIcon"
+/>
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-CollapseIcon"
+/>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            aria-labelledby="panel-header-1"
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            id="panel-content-1"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root SclAccordionDetails undefined css-1lj39kh-MuiAccordionDetails-root"
+              data-quid="SCL-AccordionDetails"
+            >
+              <div
+                class="MuiStack-root SclStack undefined css-pl8gqh-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-b2Regular MuiLink-root MuiLink-underlineAlways SclLink undefined css-14kwqpj-MuiTypography-root-MuiLink-root"
+                  data-quid="SCL-Link"
+                  target="_blank"
+                >
+                  Edit
+                </a>
+                <div
+                  class="MuiStack-root SclStack undefined css-nen11g-MuiStack-root"
+                  data-quid="SCL-Stack"
+                >
+                  <div
+                    class="SclBox undefined MuiBox-root css-oevwqn"
+                    data-quid="SCL-Box"
+                    id="1-driver-0"
+                  >
+                     
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Bold SclTypography css-7dik8k-MuiTypography-root"
+                    >
+                      driver: 
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Regular SclTypography css-1oii3j5-MuiTypography-root"
+                      data-qm-block="false"
+                    >
+                      some-description
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ReviewClaimAccordion > should check if the PII is block to QM 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters SclAccordion undefined css-1808mag-MuiPaper-root-MuiAccordion-root"
+    data-quid="SCL-Accordion"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-controls="panel-content-1"
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters SclAccordionSummary MuiAccordionSummary-secondary css-1f1pi2l-MuiButtonBase-root-MuiAccordionSummary-root"
+        data-quid="SCL-AccordionSummary"
+        id="panel-header-1"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-b2Regular SclTypography css-z2uw0f-MuiTypography-root"
+          >
+            some accordion title 2
+          </span>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-ExpandIcon"
+/>
+          <svg
+            class="SCL-Icon SclIcon MuiAccordionSummary-CollapseIcon"
+/>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            aria-labelledby="panel-header-1"
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            id="panel-content-1"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root SclAccordionDetails undefined css-1lj39kh-MuiAccordionDetails-root"
+              data-quid="SCL-AccordionDetails"
+            >
+              <div
+                class="MuiStack-root SclStack undefined css-pl8gqh-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-b2Regular MuiLink-root MuiLink-underlineAlways SclLink undefined css-14kwqpj-MuiTypography-root-MuiLink-root"
+                  data-quid="SCL-Link"
+                  target="_blank"
+                >
+                  Edit
+                </a>
+                <div
+                  class="MuiStack-root SclStack undefined css-nen11g-MuiStack-root"
+                  data-quid="SCL-Stack"
+                >
+                  <div
+                    class="SclBox undefined MuiBox-root css-oevwqn"
+                    data-quid="SCL-Box"
+                    id="1-driver-0"
+                  >
+                     
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Bold SclTypography css-7dik8k-MuiTypography-root"
+                    >
+                      driver: 
+                    </span>
+                    <span
+                      class="MuiTypography-root MuiTypography-b2Regular SclTypography css-1oii3j5-MuiTypography-root"
+                      data-qm-block="true"
+                    >
+                      some-description
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

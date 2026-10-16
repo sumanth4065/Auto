@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+package-lock.json
+/.pnp
+.pnp.js
+
+# testing
+coverage
+
+# production
+build
+dist
+.yalc
+yalc.lock
+
+# misc
+.DS_Store
+tsconfig.tsbuildinfo
+stats.json
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# lambda
+*.toml
+
+# nexusiq
+nexusiq
+
+webpackbuild 
+.eslintcache
+
+.vscode
+.cursor
+.nx
+.github/chatmodes
+.github/instructions
+
+# Claude local-only files
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/**/.local/
+.claude/**/*.local.*
+.claude/hooks/*.log
+.claude/agent-memory
+
+.env*

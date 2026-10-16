@@ -1,0 +1,61 @@
+version: 0.2
+# Buildspec Reference Doc:
+# https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-syntax
+
+#################################
+# Runtime Environment Variables #
+#################################
+
+env:
+  shell: bash
+  secrets-manager:
+    NPM_TOKEN: /services/github/npm/token
+    AXE_TOKEN: /services/axe-iss/token
+    MYACT_PASSWORD: /myaccount/login:password
+    ORG_ID: /services/axe-reports/org-id
+    AXE_REPORTS_ISS_API_KEY: /services/axe-reports/iss/api-key
+  variables:
+    TARGET_ROLE_ARN: $TARGET_ROLE_ARN
+    TEST_ENV: $TEST_ENV
+    APP_NAME: $APP_NAME
+    TEST_SRC_DIRECTORY: 'tests/ada'
+    USER_ID: 'zz-ebizissdeq@aaa-calif.com'
+    AXE_USER_ID: 'zz-ebizissdeq@aaa-calif.com'
+
+#######################################################################
+# Sequence of commands CodeBuild runs during each phase of the build. #
+#######################################################################
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - chmod a+x ./scripts/assume-role.sh
+    finally:
+      - echo "Completed installing nodejs 16"
+
+  build:
+    commands:
+      - cd $TEST_SRC_DIRECTORY
+      - yarn
+      - npx playwright install
+      - echo $ORG_ID
+      - AXE_ORGANIZATION=$ORG_ID
+      - echo "Org id $AXE_ORGANIZATION"
+      - yarn test:ci
+    finally:
+      - echo '[Done]'
+      - echo $CODEBUILD_BUILD_SUCCEEDING
+  post_build:
+    commands:
+      # Send scanned results to axe-report server
+      - echo "[Post-Build phase]"
+      - |
+        if [ "$TEST_ENV" = "uat" ]; then
+          echo "Sending results to axe-reports" ;
+          yarn sendscan ;
+        fi
+      - yarn clean
+    finally:
+      - echo "[Post-Build phase Done]"

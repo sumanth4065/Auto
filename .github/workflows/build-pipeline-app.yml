@@ -1,0 +1,76 @@
+# This is a basic workflow to help you get started with Actionstrigger
+
+name: App Build Pipeline
+
+# Controls when the action will run
+on:
+  workflow_dispatch: # This allows the workflow to be triggered via the API
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - '@lib/**'
+      - '.github/workflows/build-pipeline-app.yml'
+
+env:
+  AWS_REGION: us-west-2 #Change to reflect your Region
+
+# Permissions can be added at job level or workflow level
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: write # This is required for actions/checkout
+  packages: read # This is required for packages
+jobs:
+  BuildPipeline:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/node-share-build-pipeline.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      BUILD_COMMAND: 'yarn build-app-silent && yarn test-app-silent && npm install -g aws-cdk'
+      PROJECT_PATH: app
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      CDK_ASSETS_VERSION: '2.155.122'
+      NODE_VERSION: 22
+      SCA_SCAN_EXCLUDES: 'infrastructure'
+  Tagging:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-tagging.yml@main
+    needs: BuildPipeline
+    with:
+      VersionTag: ${{ needs.BuildPipeline.outputs.VersionTag }}
+      VersionNumber: ${{ needs.BuildPipeline.outputs.VersionNumber }}
+  SlackNotification:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [BuildPipeline, Tagging]
+    secrets: inherit
+    if: ${{ always() }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'App stack AutoEFNOLNoAuthApp-${{ needs.BuildPipeline.outputs.VersionNumber }} Build Pipeline'
+      Status: >-
+        "${{ needs.BuildPipeline.result }}" == "failure" ||
+        "${{ needs.BuildPipeline.result }}" == "skipped" ||
+        "${{ needs.Tagging.result }}" == "failure" ||
+        "${{ needs.Tagging.result }}" == "skipped"
+  TriggerDeploy:
+    name: Trigger Deploy App Pipeline
+    if: github.ref == 'refs/heads/main'
+    needs: [BuildPipeline, Tagging]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Trigger Deploy App Pipeline
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-pipeline-app.yml',
+              ref: 'main',
+              inputs: {
+                APP_VERSION: '${{ needs.BuildPipeline.outputs.VersionNumber }}'
+              }
+            });

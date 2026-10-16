@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`IntroPage > should match snapshot 1`] = `
+<div>
+  <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      How the online claims process works
+    </h5>
+    <div
+      class="SclBox undefined MuiBox-root css-qslnu8"
+      data-quid="SCL-Box"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+      >
+        Filing a claim will take about 10 minutes. After you submit a claim, a representative will reach out to follow up.
+      </p>
+    </div>
+    <div
+      class="SclBox undefined MuiBox-root css-hma36w"
+      data-quid="SCL-Box"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+      >
+        Having the following handy can make the process easier :
+      </p>
+      <ul>
+        <li>
+          <p
+            class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+          >
+            <b>
+              Date, time, and location of the incident
+            </b>
+          </p>
+        </li>
+        <li>
+          <p
+            class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+          >
+            <b>
+              Year, make model, insurance carrier, etc.
+            </b>
+             for the vehicle(s) involved
+          </p>
+        </li>
+        <li>
+          <p
+            class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+          >
+            <b>
+              Names of the people involved:
+            </b>
+             drivers, witness, etc.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+      id="continue-button"
+      tabindex="0"
+      type="button"
+    >
+      Continue
+    </button>
+  </div>
+</div>
+`;

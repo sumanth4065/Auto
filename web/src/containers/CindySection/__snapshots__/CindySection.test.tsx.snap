@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CindySection > Cindy Section if pathname is /filing-claim > should match snapshot 1`] = `
+<div>
+  <div
+    class="SclBox undefined MuiBox-root css-7qgeba"
+    data-quid="SCL-Box"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row SclGrid SclCindy Mui-Cindy-root css-1j8trwf-MuiGrid-root"
+      data-quid="SCL-Cindy"
+      id="cindy-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 MuiGrid-grid-xl-12 SclGrid undefined css-1k13w9w-MuiGrid-root"
+      >
+        <div
+          class="MuiStack-root SclStack Mui-Cindy-Text-Row-root css-nen11g-MuiStack-root"
+          data-quid="SCL-Stack"
+        >
+          <div
+            class="SclBox Mui-Cindy-Icon-Box-root MuiBox-root css-1s3w9mz"
+            data-quid="SCL-Box"
+          >
+            <svg
+              class="SCL-Icon SclIcon undefined"
+/>
+          </div>
+          <div
+            class="SclBox MuiCindy-Text-root MuiBox-root css-1ncv0eq"
+            data-quid="SCL-Box"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-b2Regular SclTypography SclCindyTypography MuiCindyTypography-regular css-1xktev6-MuiTypography-root"
+              data-quid="SCL-CindyTypography"
+            >
+              If your vehicle has glass damage and anything that falls under all other damage, please file a claim under all other damage.
+            </span>
+            <div
+              class="MuiStack-root SclStack SclCindyButtonGroup Mui-Cindy-ButtonGroup-root undefined css-1wrla7p-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <div
+                style="display: flex; gap: 5px;"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary SclButton Mui-Cindy-Button-root undefined Mui-Button-rounded css-wyro15-MuiButtonBase-root-MuiButton-root"
+                  id="commonQuestionsButton"
+                  tabindex="0"
+                  type="button"
+                >
+                  View FAQ
+                </button>
+                <a
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary SclButton Mui-Cindy-Button-root undefined Mui-Button-rounded css-wyro15-MuiButtonBase-root-MuiButton-root"
+                  href="tel:18006725246"
+                  placeholder="Common questions"
+                  tabindex="0"
+                >
+                  Call 1-800-672-5246
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

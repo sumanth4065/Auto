@@ -1,0 +1,112 @@
+name: Sanity Test for AutoEFNOL 1stParty Anon / Web Pipeline- NONPROD
+
+on:
+  workflow_call:
+    inputs:
+      APP_ENV:
+        description: 'env to run sanity test'
+        type: string
+      PIPELINETYPE:
+        description: 'pipeline type app/web'
+        type: string
+
+  repository_dispatch:
+    types: efnolanon-sanity
+
+env:
+  PASSWORD: ${{secrets.QA_USER_PASSWORD}}
+  USER_PROD: ${{secrets.USER_PROD}}
+  OKTA_AUTHSERVER_ID_PROD: ${{secrets.OKTA_AUTHSERVER_ID_PROD}}
+  OKTA_CLIENT_ID_PROD: ${{secrets.OKTA_CLIENT_ID_PROD}}
+  OKTA_CLIENT_SECRET_PROD: ${{secrets.OKTA_CLIENT_SECRET_PROD}}
+  OKTA_CLIENT_ID: ${{secrets.OKTA_CLIENT_ID}}
+  OKTA_CLIENT_SECRET: ${{secrets.OKTA_CLIENT_SECRET}}
+  QA_ENT_AXE_API_KEY: ${{secrets.QA_ENT_AXE_API_KEY}}
+  QA_OKTA_APIKEY: ${{secrets.QA_OKTA_APIKEY}}
+  ORG_ID: ${{secrets.QA_AXE_ORG_ID}}
+  SLACK_TOKEN: ${{secrets.QA_SLACK_TOKEN}}
+  NPM_TOKEN: ${{ secrets.GH_TEAMS_TOKEN }}
+  ENTERPRISE_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  AXE_TOKEN: ${{ secrets.QA_ENT_AXE_TOKEN }}
+  TEST_ENV: ${{inputs.APP_ENV}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: ./tests/ui
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies using a safe clean install
+        run: npm install
+
+      - name: Install Playwright
+        id: install-playwright
+        run: |
+          npx playwright install chromium
+          echo "test env is ${{ inputs.APP_ENV }}"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        id: install-deps
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+    
+      - name: Sanity Test in QA
+        if: ${{ inputs.APP_ENV == 'qa' && ( inputs.PIPELINETYPE == 'app' || inputs.PIPELINETYPE == 'web' ) }}
+        id: qa-test
+        continue-on-error: true
+        run: npm run sanity-pipeline-qa
+        env:
+          TEST_FIRSTNAME: 'JAYNESDKVB'
+          TEST_LASTNAME: 'AMOSASBVJ'
+          TEST_POLICYNUMBER: 'ATX000154322'
+          TEST_ZIPCODE: '76002'
+          JUNIT_REPORT_PATH: tests/ui/junitreports/gw-qa-junit-report.xml
+
+      - name: Upload QA test results
+        if: ${{ inputs.APP_ENV == 'qa' && ( inputs.PIPELINETYPE == 'app' || inputs.PIPELINETYPE == 'web' ) }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-qa
+          path: tests/ui/htmlreports/
+          retention-days: 14
+
+      - name: Sanity Test in UAT
+        if: ${{ inputs.APP_ENV == 'uat' && ( inputs.PIPELINETYPE == 'app' || inputs.PIPELINETYPE == 'web' ) }}
+        id: uat-gw-test
+        continue-on-error: true
+        run: npm run sanity-pipeline-uat
+        env:
+          TEST_FIRSTNAME: 'JAYNESDKVB'
+          TEST_LASTNAME: 'AMOSASBVJ'
+          TEST_POLICYNUMBER: 'ATX000154322'
+          TEST_ZIPCODE: '76002'
+          JUNIT_REPORT_PATH: tests/ui/junitreports/gw-uat-junit-report.xml
+
+      - name: Upload UAT test results
+        if: ${{ inputs.APP_ENV == 'uat' && ( inputs.PIPELINETYPE == 'app' || inputs.PIPELINETYPE == 'web' ) }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-uat
+          path: tests/ui/htmlreports/
+          retention-days: 14

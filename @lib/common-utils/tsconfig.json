@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2016"],
+    "target": "ES2016",
+    "skipLibCheck": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "types": ["node", "jest"],
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "noEmit": false
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts", "src/helpers/fixtures/**"]
+}

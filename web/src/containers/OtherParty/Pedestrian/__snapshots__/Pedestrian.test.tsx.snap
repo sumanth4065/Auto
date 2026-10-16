@@ -1,0 +1,302 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OtherPartyPedestrian > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        Were any pedestrians or cyclists involved in the incident?
+      </h5>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl MuiCheckboxGroup-FormControl MuiCheckboxGroup-FormControl-Layout-column css-1u26s0u-MuiFormControl-root"
+          data-quid="SCL-FormControl"
+        >
+          <label
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiCheckboxGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+            id=":r1:"
+          >
+            Select all that apply
+          </label>
+          <div
+            aria-labelledby=":r1:"
+            class="MuiFormGroup-root MuiCheckboxGroup-root MuiCheckboxGroup-Layout-column MuiCheckboxGroup-gutter css-ht89z8-MuiFormGroup-root"
+          >
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+              data-quid="SCL-Checkbox"
+            >
+              <span
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-outlined css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  data-indeterminate="false"
+                  id="pedestrian-option"
+                  name="pedestrian"
+                  type="checkbox"
+                />
+                <div
+                  class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                  data-quid="SCL-Box"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b2Regular SclTypography MuiCheckbox-Typography-root MuiCheckbox-Typography-Variant-regular css-e07ugd-MuiTypography-root"
+                  data-quid="SCL-CheckboxTypography"
+                >
+                  Pedestrian(s)
+                </p>
+              </div>
+            </label>
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+              data-quid="SCL-Checkbox"
+            >
+              <span
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-outlined css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  data-indeterminate="false"
+                  id="cyclist-option"
+                  name="cyclist"
+                  type="checkbox"
+                />
+                <div
+                  class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                  data-quid="SCL-Box"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b2Regular SclTypography MuiCheckbox-Typography-root MuiCheckbox-Typography-Variant-regular css-e07ugd-MuiTypography-root"
+                  data-quid="SCL-CheckboxTypography"
+                >
+                  Cyclist(s)
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div
+          class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+          data-quid="SCL-Box"
+        >
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-lude9u-MuiButtonBase-root-MuiButton-root"
+            id="none-above-button"
+            tabindex="0"
+            type="button"
+          >
+            None of the above
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      Were any pedestrians or cyclists involved in the incident?
+    </h5>
+    <form
+      autocomplete="off"
+      class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+      data-quid="SCL-Box"
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth SclFormControl MuiCheckboxGroup-FormControl MuiCheckboxGroup-FormControl-Layout-column css-1u26s0u-MuiFormControl-root"
+        data-quid="SCL-FormControl"
+      >
+        <label
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiCheckboxGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+          id=":r1:"
+        >
+          Select all that apply
+        </label>
+        <div
+          aria-labelledby=":r1:"
+          class="MuiFormGroup-root MuiCheckboxGroup-root MuiCheckboxGroup-Layout-column MuiCheckboxGroup-gutter css-ht89z8-MuiFormGroup-root"
+        >
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+            data-quid="SCL-Checkbox"
+          >
+            <span
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-outlined css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                data-indeterminate="false"
+                id="pedestrian-option"
+                name="pedestrian"
+                type="checkbox"
+              />
+              <div
+                class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                data-quid="SCL-Box"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b2Regular SclTypography MuiCheckbox-Typography-root MuiCheckbox-Typography-Variant-regular css-e07ugd-MuiTypography-root"
+                data-quid="SCL-CheckboxTypography"
+              >
+                Pedestrian(s)
+              </p>
+            </div>
+          </label>
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+            data-quid="SCL-Checkbox"
+          >
+            <span
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-outlined css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                data-indeterminate="false"
+                id="cyclist-option"
+                name="cyclist"
+                type="checkbox"
+              />
+              <div
+                class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                data-quid="SCL-Box"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b2Regular SclTypography MuiCheckbox-Typography-root MuiCheckbox-Typography-Variant-regular css-e07ugd-MuiTypography-root"
+                data-quid="SCL-CheckboxTypography"
+              >
+                Cyclist(s)
+              </p>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+        data-quid="SCL-Box"
+      >
+        <button
+          aria-disabled="true"
+          class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          id="next-button"
+          tabindex="-1"
+          type="submit"
+        >
+          Next
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-lude9u-MuiButtonBase-root-MuiButton-root"
+          id="none-above-button"
+          tabindex="0"
+          type="button"
+        >
+          None of the above
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

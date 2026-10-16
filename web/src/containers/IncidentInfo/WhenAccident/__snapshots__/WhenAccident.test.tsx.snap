@@ -1,0 +1,422 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WhenAccident > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        When did the incident happen?
+      </h5>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-8doog3"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField SclDatePicker undefined MuiDatePickerTextField css-13tdc0j-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r1:"
+            id=":r1:-label"
+          >
+            Date of the incident
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby=":r1:-helper-text"
+              aria-invalid="false"
+              autocomplete="off"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r1:"
+              inputmode="text"
+              name="lossDate"
+              placeholder="MM / DD / YYYY"
+              type="text"
+              value=""
+            />
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+            >
+              <button
+                aria-label="Choose date"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiTextFieldAdormentButton-end MuiDatePickerOpenIconButton css-qtu2br-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </button>
+            </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Date of the incident
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+            id=":r1:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                <div
+                  class="MuiBox-root css-1obf64m"
+                  data-quid="SCL-TextFieldHelperText"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+                  >
+                    mm/dd/yyyy
+                  </span>
+                </div>
+              </span>
+            </div>
+          </p>
+        </div>
+        <div
+          class="SclBox SclTimePicker when-incident time-picker MuiBox-root css-4302v8"
+          data-quid="SCL-Box"
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTimePickerInput css-1h4chpz-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              for="lossTime"
+              id="lossTime-label"
+            >
+              Approximate time of the incident
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd Mui-visuallyEnabled css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-describedby="lossTime-helper-text"
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+                id="lossTime"
+                inputmode="text"
+                name="lossTime"
+                placeholder="hh : mm aa"
+                type="text"
+                value=""
+              />
+              <div
+                class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+              >
+                <button
+                  aria-label="Choose time"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiOpenPickerIconButton css-7zv1m0-MuiButtonBase-root-MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  <svg
+                    class="SCL-Icon SclIcon MuiOpenPickerIcon"
+/>
+                </button>
+              </div>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Approximate time of the incident
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+              id="lossTime-helper-text"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+                >
+                  hh:mm
+                </span>
+              </div>
+            </p>
+          </div>
+        </div>
+        <div
+          class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+          data-quid="SCL-Box"
+        >
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      When did the incident happen?
+    </h5>
+    <form
+      autocomplete="off"
+      class="SclBox SclForm MuiForm-root MuiBox-root css-8doog3"
+      data-quid="SCL-Box"
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField SclDatePicker undefined MuiDatePickerTextField css-13tdc0j-MuiFormControl-root-MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for=":r1:"
+          id=":r1:-label"
+        >
+          Date of the incident
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-describedby=":r1:-helper-text"
+            aria-invalid="false"
+            autocomplete="off"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+            id=":r1:"
+            inputmode="text"
+            name="lossDate"
+            placeholder="MM / DD / YYYY"
+            type="text"
+            value=""
+          />
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+          >
+            <button
+              aria-label="Choose date"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiTextFieldAdormentButton-end MuiDatePickerOpenIconButton css-qtu2br-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </button>
+          </div>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                Date of the incident
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+          id=":r1:-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+                >
+                  mm/dd/yyyy
+                </span>
+              </div>
+            </span>
+          </div>
+        </p>
+      </div>
+      <div
+        class="SclBox SclTimePicker when-incident time-picker MuiBox-root css-4302v8"
+        data-quid="SCL-Box"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTimePickerInput css-1h4chpz-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="lossTime"
+            id="lossTime-label"
+          >
+            Approximate time of the incident
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd Mui-visuallyEnabled css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="lossTime-helper-text"
+              aria-invalid="false"
+              autocomplete="off"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id="lossTime"
+              inputmode="text"
+              name="lossTime"
+              placeholder="hh : mm aa"
+              type="text"
+              value=""
+            />
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+            >
+              <button
+                aria-label="Choose time"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiOpenPickerIconButton css-7zv1m0-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  class="SCL-Icon SclIcon MuiOpenPickerIcon"
+/>
+              </button>
+            </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Approximate time of the incident
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+            id="lossTime-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                hh:mm
+              </span>
+            </div>
+          </p>
+        </div>
+      </div>
+      <div
+        class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+        data-quid="SCL-Box"
+      >
+        <button
+          aria-disabled="true"
+          class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          id="next-button"
+          tabindex="-1"
+          type="submit"
+        >
+          Next
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

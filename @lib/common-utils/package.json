@@ -1,0 +1,38 @@
+{
+  "name": "@lib/common-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rimraf dist & rimraf node_modules",
+    "deploy": "ts-node src/index.ts deploy",
+    "refresh": "ts-node src/index.ts refresh",
+    "getVersions": "ts-node src/getVersions.ts",
+    "subscribe": "ts-node src/subscribeToSplunk.ts"
+  },
+  "author": "ACE",
+  "private": true,
+  "devDependencies": {
+    "@ace-clublabs/aws-tags": "^10.1.12",
+    "@types/node": "^22.0.0",
+    "jest": "29.7.0",
+    "@types/jest": "^29.5.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "3.1111.0",
+    "@ace-clublabs/iss-common-util": "^10.6.39",
+    "@ace-clublabs/aws-lambda-logger": "^10.3.2",
+    "@ace-clublabs/iss-common-lambda-v3": "^10.4.14",
+    "@ace-clublabs/iss-common-auto-efnol-models": "^10.0.66",
+    "@lib/shared-contracts": "*",
+    "rimraf": "3.0.0",
+    "@lib/types": "*",
+    "@splitsoftware/splitio": "*",
+    "@ace-clublabs/iss-cci-clients": "^13.7.4"
+  }
+}

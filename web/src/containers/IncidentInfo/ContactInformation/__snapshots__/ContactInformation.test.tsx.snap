@@ -1,0 +1,723 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Whats your contact information > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <h5
+          class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+        >
+          What's your contact information?
+        </h5>
+        <p
+          class="MuiTypography-root MuiTypography-b1Regular SclTypography css-1dfh8mj-MuiTypography-root"
+        >
+          We'll use this information to contact you regarding your claim.
+        </p>
+        <form
+          autocomplete="off"
+          class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+          data-quid="SCL-Box"
+          novalidate=""
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+            data-qm-block="true"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              for="email"
+              id="email-label"
+            >
+              Email
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-describedby="email-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+                id="email"
+                maxlength="60"
+                name="email"
+                required=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Email
+                     
+                    *
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+              id="email-helper-text"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              />
+            </p>
+          </div>
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+            data-qm-block="true"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              for="mobileNumber"
+              id="mobileNumber-label"
+            >
+              Mobile number
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-describedby="mobileNumber-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+                id="mobileNumber"
+                maxlength="14"
+                name="mobileNumber"
+                required=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Mobile number
+                     
+                    *
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+              id="mobileNumber-helper-text"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              />
+            </p>
+          </div>
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+            data-quid="SCL-Checkbox"
+          >
+            <span
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                data-indeterminate="false"
+                id="enableTextCommunication"
+                name="enableTextCommunication"
+                type="checkbox"
+              />
+              <div
+                class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                data-quid="SCL-Box"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+              >
+                <span
+                  style="font-weight: bold;"
+                >
+                  Enable text communication 
+                </span>
+                to receive immediate claim updates, message your claim representative directly, and conveniently send photos and documents.
+              </p>
+            </div>
+          </label>
+          <section
+            style="margin-top: -1rem;"
+          >
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+              data-quid="SCL-Checkbox"
+            >
+              <span
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  data-indeterminate="false"
+                  id="enableEmailCommunication"
+                  name="enableEmailCommunication"
+                  type="checkbox"
+                />
+                <div
+                  class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                  data-quid="SCL-Box"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+                >
+                  <span
+                    style="font-weight: bold;"
+                  >
+                    Enable email communication 
+                  </span>
+                  to receive claim updates by email.
+                </p>
+              </div>
+            </label>
+          </section>
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-ztpqe4-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+          <p
+            class="MuiTypography-root MuiTypography-b3Regular SclTypography css-1swauu6-MuiTypography-root"
+          >
+            By selecting “Next,” you acknowledge that it's OK for us, or parties that perform services on 
+            AAA's
+             behalf, to contact you regarding your claim with the information above. Message and data rates may apply. You can opt out of email and/or text messaging at any time.
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        What's your contact information?
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-b1Regular SclTypography css-1dfh8mj-MuiTypography-root"
+      >
+        We'll use this information to contact you regarding your claim.
+      </p>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+          data-qm-block="true"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="email"
+            id="email-label"
+          >
+            Email
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="email-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id="email"
+              maxlength="60"
+              name="email"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Email
+                   
+                  *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+            id="email-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            />
+          </p>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+          data-qm-block="true"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="mobileNumber"
+            id="mobileNumber-label"
+          >
+            Mobile number
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="mobileNumber-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id="mobileNumber"
+              maxlength="14"
+              name="mobileNumber"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Mobile number
+                   
+                  *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+            id="mobileNumber-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            />
+          </p>
+        </div>
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+          data-quid="SCL-Checkbox"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+              data-indeterminate="false"
+              id="enableTextCommunication"
+              name="enableTextCommunication"
+              type="checkbox"
+            />
+            <div
+              class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+              data-quid="SCL-Box"
+            />
+            <svg
+              class="SCL-Icon SclIcon undefined"
+/>
+          </span>
+          <div
+            class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+            data-quid="SCL-Stack"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+            >
+              <span
+                style="font-weight: bold;"
+              >
+                Enable text communication 
+              </span>
+              to receive immediate claim updates, message your claim representative directly, and conveniently send photos and documents.
+            </p>
+          </div>
+        </label>
+        <section
+          style="margin-top: -1rem;"
+        >
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+            data-quid="SCL-Checkbox"
+          >
+            <span
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                data-indeterminate="false"
+                id="enableEmailCommunication"
+                name="enableEmailCommunication"
+                type="checkbox"
+              />
+              <div
+                class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+                data-quid="SCL-Box"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+              >
+                <span
+                  style="font-weight: bold;"
+                >
+                  Enable email communication 
+                </span>
+                to receive claim updates by email.
+              </p>
+            </div>
+          </label>
+        </section>
+        <button
+          aria-disabled="true"
+          class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-ztpqe4-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          id="next-button"
+          tabindex="-1"
+          type="submit"
+        >
+          Next
+        </button>
+        <p
+          class="MuiTypography-root MuiTypography-b3Regular SclTypography css-1swauu6-MuiTypography-root"
+        >
+          By selecting “Next,” you acknowledge that it's OK for us, or parties that perform services on 
+          AAA's
+           behalf, to contact you regarding your claim with the information above. Message and data rates may apply. You can opt out of email and/or text messaging at any time.
+        </p>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Whats your contact information > user actions > should set previous page to /who-is-reporting 1`] = `
+<div>
+  <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      What's your contact information?
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-b1Regular SclTypography css-1dfh8mj-MuiTypography-root"
+    >
+      We'll use this information to contact you regarding your claim.
+    </p>
+    <form
+      autocomplete="off"
+      class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+      data-quid="SCL-Box"
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+        data-qm-block="true"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for="email"
+          id="email-label"
+        >
+          Email
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-describedby="email-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+            id="email"
+            maxlength="60"
+            name="email"
+            required=""
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                Email
+                 
+                *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+          id="email-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          />
+        </p>
+      </div>
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+        data-qm-block="true"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for="mobileNumber"
+          id="mobileNumber-label"
+        >
+          Mobile number
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-describedby="mobileNumber-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mobileNumber"
+            maxlength="14"
+            name="mobileNumber"
+            required=""
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                Mobile number
+                 
+                *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+          id="mobileNumber-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          />
+        </p>
+      </div>
+      <label
+        class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+        data-quid="SCL-Checkbox"
+      >
+        <span
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+        >
+          <input
+            class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+            data-indeterminate="false"
+            id="enableTextCommunication"
+            name="enableTextCommunication"
+            type="checkbox"
+          />
+          <div
+            class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+            data-quid="SCL-Box"
+          />
+          <svg
+            class="SCL-Icon SclIcon undefined"
+/>
+        </span>
+        <div
+          class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+          data-quid="SCL-Stack"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+          >
+            <span
+              style="font-weight: bold;"
+            >
+              Enable text communication 
+            </span>
+            to receive immediate claim updates, message your claim representative directly, and conveniently send photos and documents.
+          </p>
+        </div>
+      </label>
+      <section
+        style="margin-top: -1rem;"
+      >
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclCheckbox Mui-fullWidth MuiCheckbox-FormControlLabel MuiCheckbox-FormControlLabel-Variant-text Mui-selected Mui-selected Mui-edge undefined css-1ez2iz4-MuiFormControlLabel-root"
+          data-quid="SCL-Checkbox"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-Variant-text css-eg3fxw-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+              data-indeterminate="false"
+              id="enableEmailCommunication"
+              name="enableEmailCommunication"
+              type="checkbox"
+            />
+            <div
+              class="SclBox MUI-Checkbox-hoverIndicator MuiBox-root css-0"
+              data-quid="SCL-Box"
+            />
+            <svg
+              class="SCL-Icon SclIcon undefined"
+/>
+          </span>
+          <div
+            class="MuiStack-root SclStack MuiCheckbox-LabelStack css-vu7pr9-MuiStack-root"
+            data-quid="SCL-Stack"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-b1Regular SclTypography css-cfm9y6-MuiTypography-root"
+            >
+              <span
+                style="font-weight: bold;"
+              >
+                Enable email communication 
+              </span>
+              to receive claim updates by email.
+            </p>
+          </div>
+        </label>
+      </section>
+      <button
+        aria-disabled="true"
+        class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-ztpqe4-MuiButtonBase-root-MuiButton-root"
+        disabled=""
+        id="next-button"
+        tabindex="-1"
+        type="submit"
+      >
+        Next
+      </button>
+      <p
+        class="MuiTypography-root MuiTypography-b3Regular SclTypography css-1swauu6-MuiTypography-root"
+      >
+        By selecting “Next,” you acknowledge that it's OK for us, or parties that perform services on 
+        AAA's
+         behalf, to contact you regarding your claim with the information above. Message and data rates may apply. You can opt out of email and/or text messaging at any time.
+      </p>
+    </form>
+  </div>
+</div>
+`;

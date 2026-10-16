@@ -1,0 +1,396 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AdditionalDetailsTransition > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="MuiStepper-root MuiStepper-horizontal MuiStepper-Steps-4 css-175enn5-MuiStepper-root"
+          id="LocalStepper-3"
+        >
+          <div
+            class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 14 14"
+                >
+                  <circle
+                    cx="7"
+                    cy="7"
+                    r="7"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              />
+            </span>
+          </div>
+          <div
+            class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-18yu8ws-MuiStepConnector-root"
+          >
+            <span
+              class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+            />
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 14 14"
+                >
+                  <circle
+                    cx="7"
+                    cy="7"
+                    r="7"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              />
+            </span>
+          </div>
+          <div
+            class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-18yu8ws-MuiStepConnector-root"
+          >
+            <span
+              class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+            />
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 14 14"
+                >
+                  <circle
+                    cx="7"
+                    cy="7"
+                    r="7"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              />
+            </span>
+          </div>
+          <div
+            class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-x0u4nz-MuiStepConnector-root"
+          >
+            <span
+              class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+            />
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal css-mp5tie-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-active css-78cglg-MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 14 14"
+                >
+                  <circle
+                    cx="7"
+                    cy="7"
+                    r="7"
+                  />
+                  <text
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="7"
+                    y="7"
+                  >
+                    4
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+              />
+            </span>
+          </div>
+        </div>
+        <h5
+          class="MuiTypography-root MuiTypography-h5Medium css-1cunq96-MuiTypography-root"
+        >
+          Lastly, let's gather a few additional details.
+        </h5>
+        <div
+          class="MuiBox-root css-m9mlq4"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-b1Regular css-cfm9y6-MuiTypography-root"
+          >
+            Tell us if you have any property damage, witnesses, or if any pedestrians and/or cyclists were involved in the incident.
+          </p>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1bvuwm3-MuiButtonBase-root-MuiButton-root"
+          id="next-button"
+          tabindex="0"
+          type="button"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="MuiStepper-root MuiStepper-horizontal MuiStepper-Steps-4 css-175enn5-MuiStepper-root"
+        id="LocalStepper-3"
+      >
+        <div
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+        >
+          <span
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+          >
+            <span
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 14 14"
+              >
+                <circle
+                  cx="7"
+                  cy="7"
+                  r="7"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+            />
+          </span>
+        </div>
+        <div
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-18yu8ws-MuiStepConnector-root"
+        >
+          <span
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+          />
+        </div>
+        <div
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+        >
+          <span
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+          >
+            <span
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 14 14"
+              >
+                <circle
+                  cx="7"
+                  cy="7"
+                  r="7"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+            />
+          </span>
+        </div>
+        <div
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-completed css-18yu8ws-MuiStepConnector-root"
+        >
+          <span
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+          />
+        </div>
+        <div
+          class="MuiStep-root MuiStep-horizontal Mui-completed css-mp5tie-MuiStep-root"
+        >
+          <span
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+          >
+            <span
+              class="MuiStepLabel-iconContainer Mui-completed css-1b2ju2j-MuiStepLabel-iconContainer"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-completed css-4xopzk-MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 14 14"
+              >
+                <circle
+                  cx="7"
+                  cy="7"
+                  r="7"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+            />
+          </span>
+        </div>
+        <div
+          class="MuiStepConnector-root MuiStepConnector-horizontal Mui-active css-x0u4nz-MuiStepConnector-root"
+        >
+          <span
+            class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-1itnun-MuiStepConnector-line"
+          />
+        </div>
+        <div
+          class="MuiStep-root MuiStep-horizontal css-mp5tie-MuiStep-root"
+        >
+          <span
+            class="MuiStepLabel-root MuiStepLabel-horizontal css-14jtsim-MuiStepLabel-root"
+          >
+            <span
+              class="MuiStepLabel-iconContainer Mui-active css-1b2ju2j-MuiStepLabel-iconContainer"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiMinimalisticStepIcon-root Mui-active css-78cglg-MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 14 14"
+              >
+                <circle
+                  cx="7"
+                  cy="7"
+                  r="7"
+                />
+                <text
+                  dominant-baseline="central"
+                  text-anchor="middle"
+                  x="7"
+                  y="7"
+                >
+                  4
+                </text>
+              </svg>
+            </span>
+            <span
+              class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
+            />
+          </span>
+        </div>
+      </div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium css-1cunq96-MuiTypography-root"
+      >
+        Lastly, let's gather a few additional details.
+      </h5>
+      <div
+        class="MuiBox-root css-m9mlq4"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-b1Regular css-cfm9y6-MuiTypography-root"
+        >
+          Tell us if you have any property damage, witnesses, or if any pedestrians and/or cyclists were involved in the incident.
+        </p>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1bvuwm3-MuiButtonBase-root-MuiButton-root"
+        id="next-button"
+        tabindex="0"
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

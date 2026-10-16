@@ -1,0 +1,91 @@
+{
+  "name": "@lib/insurance-efnol-without-login",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "(node -e \"require.resolve('@ace-clublabs/claude-plugin')\" 2>/dev/null && npx @ace-clublabs/claude-plugin update --force || true) && lerna run build",
+    "build-app": "yarn build-types && yarn build-lib && lerna run build --scope \"@lib/**\" --scope \"@app/**\" --include-dependencies",
+    "build-app-silent": "yarn build-types && yarn build-lib && lerna run build --scope \"@lib/**\" --scope \"@app/**\" --include-dependencies --stream --loglevel=silent",
+    "build-lib": "lerna run build --scope \"@lib/**\" --include-dependencies --stream",
+    "build-shared-contracts": "lerna run build --scope \"@lib/shared-contracts/**\" --include-dependencies",
+    "build-silent": "lerna run build --stream --parallel --loglevel=silent",
+    "build-types": "lerna run build --scope \"@lib/types\" --include-dependencies",
+    "build-web": "yarn build-types && yarn build-lib && lerna run build --scope \"@lib/**\" --scope \"@web/**\" --include-dependencies",
+    "build-web-silent": "lerna run build --scope \"@web/auto-efnol-without-login\" --include-dependencies --stream --loglevel=silent",
+    "build-web-snyk": "lerna run build:snyk --scope \"@web/**\" --include-dependencies",
+    "clean": "yarn clean-build && yarn clean-modules",
+    "clean-build": "rimraf **/dist **/*/dist **/build **/cdk.out **/nexusiq **/fortify",
+    "clean-modules": "rimraf node_modules **/node_modules */**/node_modules",
+    "preview": "lerna run preview --scope \"@web/auto-efnol-without-login\"",
+    "reset-build": "yarn clean && yarn && yarn build",
+    "start": "lerna run start --scope \"@web/auto-efnol-without-login\"",
+    "test": "lerna run test",
+    "test-app": "lerna run test --scope \"@app/**\"",
+    "test-app-silent": "lerna run test --scope \"@app/**\" --stream --parallel --loglevel=silent",
+    "test-silent": "lerna run test --stream --concurrency=4",
+    "test-web": "lerna run test:ci --scope \"@web/auto-efnol-without-login\" --stream --parallel",
+    "test-web-silent": "lerna run test:ci --scope \"@web/auto-efnol-without-login\" --stream --parallel --loglevel=silent",
+    "verify": "yarn && yarn build-silent && yarn test-silent"
+  },
+  "workspaces": {
+    "packages": [
+      "@lib/**",
+      "app/**",
+      "web/**",
+      "infrastructure/**"
+    ],
+    "nohoist": [
+      "**/babel-loader",
+      "**/babel-preset-react-app/@babel/runtime"
+    ]
+  },
+  "devDependencies": {
+    "@ace-clublabs/claude-plugin": "latest",
+    "fast-xml-parser": "^5.3.4",
+    "@aws-sdk/util-dynamodb": "^3.981.0",
+    "husky": "4.2.5",
+    "lerna": "8.2.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.9.3",
+    "yarn": "^1.22.22"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn build && yarn test"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "levenary": "^1.1.1",
+    "luxon": "^3.2.1"
+  },
+  "resolutions": {
+    "@types/react": "^16.9.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.1",
+    "@types/glob": "^8.1.0",
+    "@ace-clublabs/aws-tags": "^10.1.12",
+    "constructs": "^10.6.0",
+    "diff": "^8.0.3",
+    "fast-xml-parser": "^5.3.4",
+    "@smithy/core": "3.33.3",
+    "**/@smithy/core": "3.33.3",
+    "@smithy/types": "4.14.1",
+    "**/@smithy/types": "4.14.1",
+    "@smithy/uuid": "^1.4.2",
+    "**/@smithy/uuid": "^1.4.2",
+    "axios": "1.19.0",
+    "form-data": "^4.0.6",
+    "js-yaml": "^4.3.1",
+    "@ace-clublabs/aws-lambda-v3": "^10.1.13",
+    "@ace-clublabs/iss-common-util": "^10.6.39",
+    "@ace-clublabs/iss-common-lambda-v3": "^10.4.14",
+    "@ace-clublabs/iss-cci-clients": "^13.7.4"
+  }
+}

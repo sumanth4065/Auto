@@ -1,0 +1,477 @@
+name: Deploy Web Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      APP_VERSION:
+        description: 'Which version of the web app to deploy?'
+        type: string
+        required: true
+      UAT_ONLY:
+        description: UAT Only (skip Dev/QA/Prod) — mutually exclusive with PROD_ONLY
+        type: boolean
+        default: false
+        required: false
+      PROD_ONLY:
+        description: Prod Only (skip Dev/QA/UAT) — mutually exclusive with UAT_ONLY
+        type: boolean
+        default: false
+        required: false
+  workflow_call:
+    inputs:
+      APP_VERSION:
+        description: 'Which version of the web app to deploy?'
+        type: string
+        required: true
+      UAT_ONLY:
+        description: UAT Only (skip Dev/QA/Prod) — mutually exclusive with PROD_ONLY
+        type: boolean
+        default: false
+        required: false
+      PROD_ONLY:
+        description: Prod Only (skip Dev/QA/UAT) — mutually exclusive with UAT_ONLY
+        type: boolean
+        default: false
+        required: false
+
+run-name: 'Deploy AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} by @${{ github.actor }}'
+
+permissions:
+  id-token: write
+  contents: write
+  packages: read
+
+jobs:
+  ##########################
+  # Validate Inputs
+  ##########################
+  ValidateInputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check mutually exclusive inputs
+        if: ${{ inputs.UAT_ONLY == true && inputs.PROD_ONLY == true }}
+        run: |
+          echo "::error::UAT_ONLY and PROD_ONLY are mutually exclusive. Select only one."
+          exit 1
+
+  ##########################
+  # Extract JIRA Tickets from Commit Range
+  ##########################
+  ExtractJiraTickets:
+    needs: [ValidateInputs]
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/extract-jira-tickets.yml@main
+    secrets: inherit
+    with:
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  # =====================================================================
+  # DEV ENVIRONMENT - Parallel Region Deployment
+  # =====================================================================
+  DeployDev:
+    needs: [ValidateInputs]
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '018363016784'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'dev'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+
+  CacheInvalidationDev:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployDev']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'E2CZ0LQFZ2QHQN'
+      CLOUDFRONT_WORKLOAD_ID: '813982038983'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+
+  UpdateJiraAssetDev:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployDev]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployDev.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'dev'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationDev:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployDev, CacheInvalidationDev]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} in DEV environment'
+      Status: >-
+        "${{ needs.DeployDev.result }}" == "failure" ||
+        "${{ needs.DeployDev.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationDev.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationDev.result }}" == "skipped"
+
+  # =====================================================================
+  # QA ENVIRONMENT - Parallel Region Deployment
+  # =====================================================================
+  ApprovalStepForQa:
+    runs-on: ubuntu-latest
+    environment: 'qa'
+    needs: [DeployDev, CacheInvalidationDev]
+    steps:
+      - name: Approval Step
+        run: |
+          echo 'Approved for the qa deployment'
+
+  DeployQA:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    needs: [ApprovalStepForQa]
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '027449218986'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'qa'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+
+  CacheInvalidationQA:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployQA']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'E1XXCVS9QZXZTZ'
+      CLOUDFRONT_WORKLOAD_ID: '153913710967'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+
+  SanityQA:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployQA]
+    with:
+      APP_ENV: 'qa'
+      PIPELINETYPE: 'web'
+
+  UpdateJiraAssetQA:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployQA]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployQA.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'qa'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationQA:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployQA, CacheInvalidationQA, SanityQA]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} - QA'
+      Status: >-
+        "${{ needs.DeployQA.result }}" == "failure" ||
+        "${{ needs.DeployQA.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationQA.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationQA.result }}" == "skipped" ||
+        "${{ needs.SanityQA.result }}" == "failure" ||
+        "${{ needs.SanityQA.result }}" == "skipped"
+
+  # =====================================================================
+  # UAT ENVIRONMENT - Manual Approval Required
+  # =====================================================================
+  ApprovalStepForUat:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: 'uat'
+    needs: [DeployQA, CacheInvalidationQA]
+    steps:
+      - name: Approval Step
+        run: |
+          echo 'Approved for the uat deployment'
+
+  DeployUAT:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    needs: [ApprovalStepForUat]
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '387467002603'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'uat'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+
+  CacheInvalidationUAT:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployUAT']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'EPBP87H8FDL49'
+      CLOUDFRONT_WORKLOAD_ID: '976388742119'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+
+  SanityUAT:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployUAT]
+    with:
+      APP_ENV: 'uat'
+      PIPELINETYPE: 'web'
+
+  UpdateJiraAssetUAT:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployUAT]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployUAT.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'uat'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationUAT:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployUAT, CacheInvalidationUAT, SanityUAT]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} - UAT'
+      Status: >-
+        "${{ needs.DeployUAT.result }}" == "failure" ||
+        "${{ needs.DeployUAT.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationUAT.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationUAT.result }}" == "skipped" ||
+        "${{ needs.SanityUAT.result }}" == "failure" ||
+        "${{ needs.SanityUAT.result }}" == "skipped"
+
+  # =====================================================================
+  # PROD ENVIRONMENT - Manual Approval Required
+  # =====================================================================
+  ApprovalStepForProd:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: 'prod'
+    needs: [DeployUAT, CacheInvalidationUAT]
+    steps:
+      - name: Approval Step
+        run: |
+          echo 'Approved for the prod deployment'
+
+  DeployProd:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    needs: [ApprovalStepForProd]
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '260742508131'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'prod'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+
+  CacheInvalidationProd:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployProd']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'E14NY12H3EWAYX'
+      CLOUDFRONT_WORKLOAD_ID: '159734894412'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+
+  UpdateJiraAssetProd:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployProd]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployProd.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'prod'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationProd:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployProd, CacheInvalidationProd]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} in PROD environment'
+      Status: >-
+        "${{ needs.DeployProd.result }}" == "failure" ||
+        "${{ needs.DeployProd.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationProd.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationProd.result }}" == "skipped"
+
+  # =====================================================================
+  # UAT ONLY (skip Dev/QA/Prod, deploy UAT only)
+  # =====================================================================
+  ApprovalStepForUatOnly:
+    needs: [ValidateInputs]
+    if: '${{ inputs.UAT_ONLY == true && inputs.PROD_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: uat
+    steps:
+      - name: Approval Step
+        run: |
+          echo 'Approved for the uat deployment'
+  DeployUatOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    needs: [ApprovalStepForUatOnly]
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '387467002603'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'uat'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+  CacheInvalidationUatOnly:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployUatOnly']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'EPBP87H8FDL49'
+      CLOUDFRONT_WORKLOAD_ID: '976388742119'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+  SanityUatOnly:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployUatOnly]
+    with:
+      APP_ENV: 'uat'
+      PIPELINETYPE: 'web'
+  UpdateJiraAssetUatOnly:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployUatOnly]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployUatOnly.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'uat'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+  SlackNotificationUatOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployUatOnly, CacheInvalidationUatOnly, SanityUatOnly]
+    secrets: inherit
+    if: ${{ always() && inputs.UAT_ONLY == true && inputs.PROD_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} - UAT (UAT Only)'
+      Status: >-
+        "${{ needs.DeployUatOnly.result }}" == "failure" ||
+        "${{ needs.DeployUatOnly.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationUatOnly.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationUatOnly.result }}" == "skipped" ||
+        "${{ needs.SanityUatOnly.result }}" == "failure" ||
+        "${{ needs.SanityUatOnly.result }}" == "skipped"
+
+  # =====================================================================
+  # PROD ONLY (skip Dev/QA/UAT)
+  # =====================================================================
+  ApprovalStepForProdOnly:
+    needs: [ValidateInputs]
+    if: '${{ inputs.PROD_ONLY == true && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Approval Step
+        run: |
+          echo 'Approved for the prod deployment'
+  DeployProdOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-web-stack.yml@main
+    secrets: inherit
+    needs: [ApprovalStepForProdOnly]
+    strategy:
+      fail-fast: false
+      matrix:
+        regions: ['us-east-1', 'us-west-2']
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: '260742508131'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthWebsite'
+      AWS_REGION: ${{ matrix.regions }}
+      ARTIFACT_NAME: 'insurance_auto_efnol_web_no_auth_build_artifact'
+      DEPLOY_ENV: 'prod'
+      CLOUDFRONT_PATH: 'insurance/auto/file-a-claim'
+      ARTIFACT_PATH: './'
+  CacheInvalidationProdOnly:
+    uses: ACE-Clublabs/cloud-ops_shared-workflows/.github/workflows/shared-trigger-workflow.yml@main
+    needs: ['DeployProdOnly']
+    secrets: inherit
+    with:
+      DISTRIBUTION_ID: 'E14NY12H3EWAYX'
+      CLOUDFRONT_WORKLOAD_ID: '159734894412'
+      PATHS: '[\"/insurance/auto/file-a-claim*\"]'
+  UpdateJiraAssetProdOnly:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployProdOnly]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployProdOnly.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'prod'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+  SlackNotificationProdOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployProdOnly, CacheInvalidationProdOnly]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == true && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Web Deploy Pipeline for AutoEFNOLNoAuthWebsite-${{ inputs.APP_VERSION }} in PROD environment (Prod Only)'
+      Status: >-
+        "${{ needs.DeployProdOnly.result }}" == "failure" ||
+        "${{ needs.DeployProdOnly.result }}" == "skipped" ||
+        "${{ needs.CacheInvalidationProdOnly.result }}" == "failure" ||
+        "${{ needs.CacheInvalidationProdOnly.result }}" == "skipped"

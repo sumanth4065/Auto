@@ -1,0 +1,676 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WhereAccident > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        Where did the incident happen?
+      </h5>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-8doog3"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r1:"
+            id=":r1:-label"
+          >
+            Street
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby=":r1:-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r1:"
+              maxlength="60"
+              name="street"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Street
+                   
+                  *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+            id=":r1:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                Example: 1234 Main Street, or I-110 North near Exit 20
+              </span>
+            </div>
+          </p>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r2:"
+            id=":r2:-label"
+          >
+            City
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby=":r2:-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r2:"
+              maxlength="60"
+              name="city"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  City
+                   
+                  *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+            id=":r2:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                Example: Los Angeles
+              </span>
+            </div>
+          </p>
+        </div>
+        <div
+          class="SclBox undefined MuiBox-root css-1mrd89u"
+          data-quid="SCL-Box"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root SclTextField undefined css-o2g9h9-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              for=":r3:"
+              id=":r3:-label"
+            >
+              State
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-sbmwzn-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-describedby=":r3:-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r3:"
+                maxlength="2"
+                name="state"
+                required=""
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    State
+                     
+                    *
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+              id=":r3:-helper-text"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+                >
+                  Example: CA
+                </span>
+              </div>
+            </p>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root SclTextField undefined css-o2g9h9-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="true"
+              for=":r4:"
+              id=":r4:-label"
+            >
+              ZIP code (optional)
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-sbmwzn-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-describedby=":r4:-helper-text"
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r4:"
+                maxlength="5"
+                name="zipCode"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    ZIP code (optional)
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+              id=":r4:-helper-text"
+            >
+              <div
+                class="MuiBox-root css-1obf64m"
+                data-quid="SCL-TextFieldHelperText"
+              />
+            </p>
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r5:"
+            id=":r5:-label"
+          >
+            Additional description (optional)
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiInputBase-adornedEnd css-1wnsk4b-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <textarea
+              aria-describedby=":r5:-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedEnd css-dpc4gf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r5:"
+              maxlength="2000"
+              name="lossLocationDescription"
+              style="height: 0px; overflow: hidden;"
+            />
+            <textarea
+              aria-hidden="true"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedEnd css-dpc4gf-MuiInputBase-input-MuiOutlinedInput-input"
+              readonly=""
+              style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+              tabindex="-1"
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  Additional description (optional)
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+            id=":r5:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                0/2000 characters
+              </span>
+            </div>
+          </p>
+        </div>
+        <div
+          class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+          data-quid="SCL-Box"
+        >
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      Where did the incident happen?
+    </h5>
+    <form
+      autocomplete="off"
+      class="SclBox SclForm MuiForm-root MuiBox-root css-8doog3"
+      data-quid="SCL-Box"
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for=":r1:"
+          id=":r1:-label"
+        >
+          Street
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-describedby=":r1:-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+            id=":r1:"
+            maxlength="60"
+            name="street"
+            required=""
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                Street
+                 
+                *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+          id=":r1:-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+            >
+              Example: 1234 Main Street, or I-110 North near Exit 20
+            </span>
+          </div>
+        </p>
+      </div>
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for=":r2:"
+          id=":r2:-label"
+        >
+          City
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-14bpfde-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-describedby=":r2:-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+            id=":r2:"
+            maxlength="60"
+            name="city"
+            required=""
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                City
+                 
+                *
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+          id=":r2:-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+            >
+              Example: Los Angeles
+            </span>
+          </div>
+        </p>
+      </div>
+      <div
+        class="SclBox undefined MuiBox-root css-1mrd89u"
+        data-quid="SCL-Box"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root SclTextField undefined css-o2g9h9-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r3:"
+            id=":r3:-label"
+          >
+            State
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-sbmwzn-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby=":r3:-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r3:"
+              maxlength="2"
+              name="state"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  State
+                   
+                  *
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1mcrxa8-MuiFormHelperText-root"
+            id=":r3:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            >
+              <span
+                class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+              >
+                Example: CA
+              </span>
+            </div>
+          </p>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root SclTextField undefined css-o2g9h9-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r4:"
+            id=":r4:-label"
+          >
+            ZIP code (optional)
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-sbmwzn-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby=":r4:-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1mmbgaf-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":r4:"
+              maxlength="5"
+              name="zipCode"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ex8a5f-MuiNotchedOutlined-root"
+              >
+                <span>
+                  ZIP code (optional)
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+            id=":r4:-helper-text"
+          >
+            <div
+              class="MuiBox-root css-1obf64m"
+              data-quid="SCL-TextFieldHelperText"
+            />
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root SclTextField undefined css-qgs2u4-MuiFormControl-root-MuiTextField-root"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-13wgd93-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for=":r5:"
+          id=":r5:-label"
+        >
+          Additional description (optional)
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiInputBase-adornedEnd css-1wnsk4b-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <textarea
+            aria-describedby=":r5:-helper-text"
+            aria-invalid="false"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedEnd css-dpc4gf-MuiInputBase-input-MuiOutlinedInput-input"
+            id=":r5:"
+            maxlength="2000"
+            name="lossLocationDescription"
+            style="height: 0px; overflow: hidden;"
+          />
+          <textarea
+            aria-hidden="true"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiInputBase-inputAdornedEnd css-dpc4gf-MuiInputBase-input-MuiOutlinedInput-input"
+            readonly=""
+            style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+            tabindex="-1"
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ex8a5f-MuiNotchedOutlined-root"
+            >
+              <span>
+                Additional description (optional)
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1mcrxa8-MuiFormHelperText-root"
+          id=":r5:-helper-text"
+        >
+          <div
+            class="MuiBox-root css-1obf64m"
+            data-quid="SCL-TextFieldHelperText"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-b3Regular SclTypography MuiTextFieldHelperMessage css-1m7wtei-MuiTypography-root"
+            >
+              0/2000 characters
+            </span>
+          </div>
+        </p>
+      </div>
+      <div
+        class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+        data-quid="SCL-Box"
+      >
+        <button
+          aria-disabled="true"
+          class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          id="next-button"
+          tabindex="-1"
+          type="submit"
+        >
+          Next
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

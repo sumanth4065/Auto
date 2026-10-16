@@ -1,0 +1,32 @@
+{
+  "name": "@infrastructure/dynamodb",
+  "version": "0.1.0",
+  "bin": {
+    "dynamodb": "bin/dynamodb.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean-js": "rimraf */**/*.js */**/*.d.ts",
+    "cdk": "cdk",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@ace-clublabs/aws-cdk-tagging": "^10.0.1",
+    "@ace-clublabs/aws-tags": "^10.1.12",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0",
+    "aws-cdk-lib": "^2.265.0",
+    "aws-cdk": "^2.1137.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "^5.9.3",
+    "constructs": "^10.6.0"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.16"
+  }
+}

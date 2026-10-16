@@ -1,0 +1,548 @@
+name: Deploy App Pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      APP_VERSION:
+        description: Which version of the app?
+        type: string
+        required: true
+      UAT_ONLY:
+        description: UAT Only (skip Dev/QA/Prod) — mutually exclusive with PROD_ONLY
+        type: boolean
+        default: false
+        required: false
+      PROD_ONLY:
+        description: Prod Only (skip Dev/QA/UAT) — mutually exclusive with UAT_ONLY
+        type: boolean
+        default: false
+        required: false
+  workflow_call:
+    inputs:
+      APP_VERSION:
+        description: Which version of the app?
+        type: string
+        required: true
+      UAT_ONLY:
+        description: UAT Only (skip Dev/QA/Prod) — mutually exclusive with PROD_ONLY
+        type: boolean
+        default: false
+        required: false
+      PROD_ONLY:
+        description: Prod Only (skip Dev/QA/UAT) — mutually exclusive with UAT_ONLY
+        type: boolean
+        default: false
+        required: false
+
+run-name: App Deploy AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}
+
+env:
+  DEV_WORKLOAD_ACCOUNT_ID: '018363016784'
+  QA_WORKLOAD_ACCOUNT_ID: '027449218986'
+  UAT_WORKLOAD_ACCOUNT_ID: '387467002603'
+  PROD_WORKLOAD_ACCOUNT_ID: '260742508131'
+
+permissions:
+  id-token: write
+  contents: write
+  packages: read
+
+jobs:
+  ValidateInputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check mutually exclusive inputs
+        if: ${{ inputs.UAT_ONLY == true && inputs.PROD_ONLY == true }}
+        run: |
+          echo "::error::UAT_ONLY and PROD_ONLY are mutually exclusive. Select only one."
+          exit 1
+
+  ##########################
+  # Extract JIRA Tickets from Commit Range
+  ##########################
+  ExtractJiraTickets:
+    needs: [ValidateInputs]
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/extract-jira-tickets.yml@main
+    secrets: inherit
+    with:
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  ##########################
+  # Set Parameters
+  ##########################
+  SetEnvVariables:
+    needs: [ValidateInputs]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Set params (run script per env)
+        env:
+          BUILD_VERSION: '${{ inputs.APP_VERSION }}'
+        run: |
+          for env in dev qa uat prod; do
+            ENVIRONMENT=$env node ./.github/scripts/setAutoEFNOLAppParamsByEnv.js
+            oregon=$(grep "PARAMETERS_OREGON=" $GITHUB_ENV | tail -1 | cut -d= -f2-)
+            virginia=$(grep "PARAMETERS_VIRGINIA=" $GITHUB_ENV | tail -1 | cut -d= -f2-)
+            prefix=$(echo $env | tr '[:lower:]' '[:upper:]')
+            echo "${prefix}_PARAMETERS_OREGON=$oregon" >> $GITHUB_ENV
+            echo "${prefix}_PARAMETERS_VIRGINIA=$virginia" >> $GITHUB_ENV
+          done
+      - name: Set outputs
+        id: parameters
+        run: |
+          for n in DEV_PARAMETERS_OREGON DEV_PARAMETERS_VIRGINIA DEV_WORKLOAD_ACCOUNT_ID \
+            QA_PARAMETERS_OREGON QA_PARAMETERS_VIRGINIA QA_WORKLOAD_ACCOUNT_ID \
+            UAT_PARAMETERS_OREGON UAT_PARAMETERS_VIRGINIA UAT_WORKLOAD_ACCOUNT_ID \
+            PROD_PARAMETERS_OREGON PROD_PARAMETERS_VIRGINIA PROD_WORKLOAD_ACCOUNT_ID; do
+            printf '%s=%s\n' "$n" "${!n}" >> $GITHUB_OUTPUT
+          done
+    outputs:
+      DevParametersOregon: ${{ steps.parameters.outputs.DEV_PARAMETERS_OREGON }}
+      DevParametersVirginia: ${{ steps.parameters.outputs.DEV_PARAMETERS_VIRGINIA }}
+      DevAccountId: ${{ steps.parameters.outputs.DEV_WORKLOAD_ACCOUNT_ID }}
+      QaParametersOregon: ${{ steps.parameters.outputs.QA_PARAMETERS_OREGON }}
+      QaParametersVirginia: ${{ steps.parameters.outputs.QA_PARAMETERS_VIRGINIA }}
+      QaAccountId: ${{ steps.parameters.outputs.QA_WORKLOAD_ACCOUNT_ID }}
+      UatParametersOregon: ${{ steps.parameters.outputs.UAT_PARAMETERS_OREGON }}
+      UatParametersVirginia: ${{ steps.parameters.outputs.UAT_PARAMETERS_VIRGINIA }}
+      UatAccountId: ${{ steps.parameters.outputs.UAT_WORKLOAD_ACCOUNT_ID }}
+      ProdParametersOregon: ${{ steps.parameters.outputs.PROD_PARAMETERS_OREGON }}
+      ProdParametersVirginia: ${{ steps.parameters.outputs.PROD_PARAMETERS_VIRGINIA }}
+      ProdAccountId: ${{ steps.parameters.outputs.PROD_WORKLOAD_ACCOUNT_ID }}
+
+  ##########################
+  # DEV
+  ##########################
+  DeployDevWest:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: SetEnvVariables
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.DevAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: dev
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.DevParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployDevEast:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: SetEnvVariables
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.DevAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: dev
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.DevParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  UpdateJiraAssetDev:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployDevWest, DeployDevEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployDevWest.result == 'success' && needs.DeployDevEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'dev'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationDev:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployDevWest, DeployDevEast]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on Dev environment'
+      Status: >-
+        "${{ needs.DeployDevWest.result }}" == "failure" ||
+        "${{ needs.DeployDevWest.result }}" == "skipped" ||
+        "${{ needs.DeployDevEast.result }}" == "failure" ||
+        "${{ needs.DeployDevEast.result }}" == "skipped"
+
+  ##########################
+  # QA - Requires Approval After Dev
+  ##########################
+  ApprovalStepForQa:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: 'qa'
+    needs: [DeployDevWest, DeployDevEast]
+    steps:
+      - name: Approval Step
+        run: echo 'Approved for the qa deployment'
+
+  DeployQAWest:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, ApprovalStepForQa]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.QaAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: qa
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.QaParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployQAEast:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, ApprovalStepForQa]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.QaAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: qa
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.QaParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  SanityCheckQA:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployQAWest, DeployQAEast]
+    with:
+      APP_ENV: 'qa'
+      PIPELINETYPE: 'app'
+
+  UpdateJiraAssetQA:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployQAWest, DeployQAEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployQAWest.result == 'success' && needs.DeployQAEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'qa'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationQA:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployQAWest, DeployQAEast, SanityCheckQA]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on QA environment'
+      Status: >-
+        "${{ needs.DeployQAWest.result }}" == "failure" ||
+        "${{ needs.DeployQAWest.result }}" == "skipped" ||
+        "${{ needs.DeployQAEast.result }}" == "failure" ||
+        "${{ needs.DeployQAEast.result }}" == "skipped" ||
+        "${{ needs.SanityCheckQA.result }}" == "failure" ||
+        "${{ needs.SanityCheckQA.result }}" == "skipped"
+
+  ##########################
+  # UAT - Requires Approval
+  ##########################
+  ApprovalStepForUat:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: 'uat'
+    needs: [DeployQAWest, DeployQAEast]
+    steps:
+      - name: Approval Step
+        run: echo 'Approved for the uat deployment'
+
+  DeployUATWest:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, ApprovalStepForUat]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.UatAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: uat
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.UatParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployUATEast:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, ApprovalStepForUat]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.UatAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: uat
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.UatParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  SanityCheckUAT:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployUATWest, DeployUATEast]
+    with:
+      APP_ENV: 'uat'
+      PIPELINETYPE: 'app'
+
+  UpdateJiraAssetUAT:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployUATWest, DeployUATEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployUATWest.result == 'success' && needs.DeployUATEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'uat'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationUAT:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployUATWest, DeployUATEast, SanityCheckUAT]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on UAT environment'
+      Status: >-
+        "${{ needs.DeployUATWest.result }}" == "failure" ||
+        "${{ needs.DeployUATWest.result }}" == "skipped" ||
+        "${{ needs.DeployUATEast.result }}" == "failure" ||
+        "${{ needs.DeployUATEast.result }}" == "skipped" ||
+        "${{ needs.SanityCheckUAT.result }}" == "failure" ||
+        "${{ needs.SanityCheckUAT.result }}" == "skipped"
+
+  ##########################
+  # PROD - Requires Approval, Sequential Deploy
+  ##########################
+  ApprovalStepForProd:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: 'prod'
+    needs: [DeployUATWest, DeployUATEast]
+    steps:
+      - name: Approval Step
+        run: echo 'Approved for the prod deployment'
+
+  DeployProdWest:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, ApprovalStepForProd]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.ProdAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: prod
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.ProdParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployProdEast:
+    if: '${{ inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}'
+    needs: [SetEnvVariables, DeployProdWest]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.ProdAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: prod
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.ProdParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  UpdateJiraAssetProd:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployProdWest, DeployProdEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployProdWest.result == 'success' && needs.DeployProdEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'prod'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationProd:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployProdWest, DeployProdEast]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == false && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on Prod environment'
+      Status: >-
+        "${{ needs.DeployProdWest.result }}" == "failure" ||
+        "${{ needs.DeployProdWest.result }}" == "skipped" ||
+        "${{ needs.DeployProdEast.result }}" == "failure" ||
+        "${{ needs.DeployProdEast.result }}" == "skipped"
+
+  # =====================================================================
+  # UAT ONLY (skip Dev/QA/Prod, deploy UAT only)
+  # =====================================================================
+  ApprovalStepForUatOnly:
+    needs: [ValidateInputs]
+    if: '${{ inputs.UAT_ONLY == true && inputs.PROD_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: uat
+    steps:
+      - name: Approval Step
+        run: echo 'Approved for the uat deployment'
+
+  DeployUatOnlyWest:
+    needs: [SetEnvVariables, ApprovalStepForUatOnly]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.UatAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: uat
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.UatParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployUatOnlyEast:
+    needs: [SetEnvVariables, DeployUatOnlyWest]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.UatAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: uat
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.UatParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  SanityUatOnly:
+    uses: ./.github/workflows/sanity-nonprod-pipeline.yml
+    secrets: inherit
+    needs: [DeployUatOnlyWest, DeployUatOnlyEast]
+    with:
+      APP_ENV: 'uat'
+      PIPELINETYPE: 'app'
+
+  UpdateJiraAssetUatOnly:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployUatOnlyWest, DeployUatOnlyEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployUatOnlyWest.result == 'success' && needs.DeployUatOnlyEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'uat'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationUatOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployUatOnlyWest, DeployUatOnlyEast, SanityUatOnly]
+    secrets: inherit
+    if: ${{ always() && inputs.UAT_ONLY == true && inputs.PROD_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on UAT environment (UAT Only)'
+      Status: >-
+        "${{ needs.DeployUatOnlyWest.result }}" == "failure" ||
+        "${{ needs.DeployUatOnlyWest.result }}" == "skipped" ||
+        "${{ needs.DeployUatOnlyEast.result }}" == "failure" ||
+        "${{ needs.DeployUatOnlyEast.result }}" == "skipped" ||
+        "${{ needs.SanityUatOnly.result }}" == "failure" ||
+        "${{ needs.SanityUatOnly.result }}" == "skipped"
+
+  # =====================================================================
+  # PROD ONLY (skip Dev/QA/UAT)
+  # =====================================================================
+  ApprovalStepForProdOnly:
+    needs: [ValidateInputs]
+    if: '${{ inputs.PROD_ONLY == true && inputs.UAT_ONLY == false }}'
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Approval Step
+        run: echo 'Approved for the prod deployment'
+
+  DeployProdOnlyWest:
+    needs: [SetEnvVariables, ApprovalStepForProdOnly]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.ProdAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-west-2
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: prod
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.ProdParametersOregon }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-west-2
+
+  DeployProdOnlyEast:
+    needs: [SetEnvVariables, DeployProdOnlyWest]
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/shared-deploy-stack.yml@main
+    secrets: inherit
+    with:
+      WORKLOAD: insurance-claims
+      ACCOUNT_ID: ${{ needs.SetEnvVariables.outputs.ProdAccountId }}
+      APP_VERSION: ${{ inputs.APP_VERSION }}
+      GITHUB_TAG_PREFIX: 'AutoEFNOLNoAuthApp'
+      AWS_REGION: us-east-1
+      APP_COMPONENT_NAME: 'auto-efnol-no-auth-app'
+      DEPLOY_ENV: prod
+      PARAMETERS: ${{ needs.SetEnvVariables.outputs.ProdParametersVirginia }}
+      CUSTOM_COMPONENT_NAME: insurance-claims-auto-efnol-no-auth-app-us-east-1
+
+  UpdateJiraAssetProdOnly:
+    uses: ace-clublabs/insurance-self-service_dev-scripts/.github/workflows/update-jira-asset-version.yml@main
+    needs: [ExtractJiraTickets, DeployProdOnlyWest, DeployProdOnlyEast]
+    secrets: inherit
+    if: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS != '' && needs.DeployProdOnlyWest.result == 'success' && needs.DeployProdOnlyEast.result == 'success' }}
+    with:
+      JIRA_TICKET_KEYS: ${{ needs.ExtractJiraTickets.outputs.JIRA_TICKET_KEYS }}
+      ASSET_VERSION_NAME: 'AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }}'
+      DEPLOY_ENV: 'prod'
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+
+  SlackNotificationProdOnly:
+    uses: ace-clublabs/cloud-ops_shared-workflows/.github/workflows/share-slack-notification.yml@main
+    needs: [DeployProdOnlyWest, DeployProdOnlyEast]
+    secrets: inherit
+    if: ${{ always() && inputs.PROD_ONLY == true && inputs.UAT_ONLY == false }}
+    with:
+      ChannelID: ${{ vars.ChannelID || 'C03T2UKEG9J' }}
+      RequestPipeline: 'Deployed AutoEFNOLNoAuthApp-${{ inputs.APP_VERSION }} on Prod environment (Prod Only)'
+      Status: >-
+        "${{ needs.DeployProdOnlyWest.result }}" == "failure" ||
+        "${{ needs.DeployProdOnlyWest.result }}" == "skipped" ||
+        "${{ needs.DeployProdOnlyEast.result }}" == "failure" ||
+        "${{ needs.DeployProdOnlyEast.result }}" == "skipped"

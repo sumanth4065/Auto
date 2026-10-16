@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- version: %VERSION% -->
+    <meta name="web-version" content="%VERSION%" />
+    <title>AAA | Auto EFNOL</title>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var savedParams = params.toString() === ''
+          ? (function () {
+              try {
+                return new URLSearchParams(localStorage.getItem('urlParams') || '');
+              } catch (e) {
+                return new URLSearchParams();
+              }
+            })()
+          : new URLSearchParams();
+        var isW =
+          params.get('isW') === 'true' ||
+          savedParams.get('isW') === 'true' ||
+          (function () {
+            try {
+              return sessionStorage.getItem('brand') === 'WInsurance';
+            } catch (e) {
+              return false;
+            }
+          })();
+        if (isW) {
+          var robotsMeta = document.createElement('meta');
+          robotsMeta.name = 'robots';
+          robotsMeta.content = 'noindex, nofollow';
+          document.head.appendChild(robotsMeta);
+        }
+
+        document.title = isW ? 'File an Insurance Claim | W Insurance' : 'AAA | Auto EFNOL';
+        if (isW) {
+          var faviconLink = document.querySelector('link[rel="icon"]');
+          if (faviconLink) {
+            faviconLink.setAttribute(
+              'href',
+              (faviconLink.getAttribute('href') || '').replace('favicon.png', 'winsurance-favicon.svg')
+            );
+            faviconLink.setAttribute('type', 'image/svg+xml');
+          }
+        }
+        document.write(
+          '<script src="' +
+            (isW
+              ? '//tms.w-insurance.com/wins/prod/utag.sync.js'
+              : '//tms.ace.aaa.com/ace/prod/utag.sync.js') +
+            '"><\/script>'
+        );
+      })();
+    </script>
+    <script type="module" src="/src/mobileBridgeLoader.ts"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

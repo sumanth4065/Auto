@@ -1,0 +1,39 @@
+{
+  "name": "playwrightapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ci": "PIPELINE=true playwright test",
+    "sanity-eFNOLAPI-auto-uat1": "TEST_ENV=uat PIPELINE=true playwright test --project=eFNOLAutoAPIA1",
+    "sanity-eFNOLAPI-auto-uat2": "TEST_ENV=uat PIPELINE=true playwright test --project=eFNOLAutoAPIB1",
+    "regression-api-auto-anon-uat1": "TEST_ENV=uat PIPELINE=true playwright test --project=eFNOLAutoAPIA1",
+    "regression-api-auto-anon-uat2": "TEST_ENV=uat PIPELINE=true playwright test --project=eFNOLAutoAPIA1",
+    "regression-api-auto-withlogin-qa1": "TEST_ENV=qa PIPELINE=true playwright test --project=AutoEfnol_API_WithLogin",
+    "regression-api-auto-withlogin-qa2": "TEST_ENV=qa PIPELINE=true playwright test --project=AutoEfnol_API_WithLogin",
+    "regression-api-auto-withlogin-uat1": "TEST_ENV=uat PIPELINE=true playwright test --project=AutoEfnol_API_WithLogin",
+    "regression-api-auto-withlogin-uat2": "TEST_ENV=uat PIPELINE=true playwright test --project=AutoEfnol_API_WithLogin",
+    "test:xray": "playwright test; npx tsx ../xray-utils-latest.ts"
+  },
+  "author": "ACE",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.22.0",
+    "@types/node": "^20.19.40",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@ace-clublabs/playwright-splunk-reporter": "10.0.1",
+    "@axe-core/playwright": "^4.4.2",
+    "archiver": "^8.0.0",
+    "axios": "^1.15.2",
+    "csv-parse": "^5.1.0",
+    "dotenv": "^16.0.1",
+    "faker": "^5.5.3",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1"
+  }
+}

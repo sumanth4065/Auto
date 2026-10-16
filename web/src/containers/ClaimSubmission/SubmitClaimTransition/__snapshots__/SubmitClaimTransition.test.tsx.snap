@@ -1,0 +1,134 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SubmitClaimTransition > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="SclBox SclLinearProgress SclProgressBar-root MuiBox-root css-79elbk"
+        data-quid="SCL-Box"
+      >
+        <span
+          aria-label="progress"
+          class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate SclProgressBar-root css-15einsk-MuiLinearProgress-root"
+          role="progressbar"
+        >
+          <span
+            class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate css-1v9jwlj-MuiLinearProgress-bar1"
+          />
+          <span
+            class="MuiLinearProgress-bar MuiLinearProgress-bar2 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar2Indeterminate css-132wb37-MuiLinearProgress-bar2"
+          />
+        </span>
+      </div>
+      <div
+        class="SclBox undefined MuiBox-root css-k008qs"
+        data-quid="SCL-Box"
+      >
+        <svg
+          class="SCL-Icon SclIcon undefined"
+/>
+        <h5
+          class="MuiTypography-root MuiTypography-h5 SclTypography css-1yngu8m-MuiTypography-root"
+        >
+          Gathering your claim details
+        </h5>
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-b1Regular SclTypography css-va8cg4-MuiTypography-root"
+      >
+        Please wait while we submit your claim. Don't refresh this page or select the back button.
+      </p>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="SclBox SclLinearProgress SclProgressBar-root MuiBox-root css-79elbk"
+      data-quid="SCL-Box"
+    >
+      <span
+        aria-label="progress"
+        class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-indeterminate SclProgressBar-root css-15einsk-MuiLinearProgress-root"
+        role="progressbar"
+      >
+        <span
+          class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate css-1v9jwlj-MuiLinearProgress-bar1"
+        />
+        <span
+          class="MuiLinearProgress-bar MuiLinearProgress-bar2 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar2Indeterminate css-132wb37-MuiLinearProgress-bar2"
+        />
+      </span>
+    </div>
+    <div
+      class="SclBox undefined MuiBox-root css-k008qs"
+      data-quid="SCL-Box"
+    >
+      <svg
+        class="SCL-Icon SclIcon undefined"
+/>
+      <h5
+        class="MuiTypography-root MuiTypography-h5 SclTypography css-1yngu8m-MuiTypography-root"
+      >
+        Gathering your claim details
+      </h5>
+    </div>
+    <p
+      class="MuiTypography-root MuiTypography-b1Regular SclTypography css-va8cg4-MuiTypography-root"
+    >
+      Please wait while we submit your claim. Don't refresh this page or select the back button.
+    </p>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

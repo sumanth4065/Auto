@@ -1,0 +1,54 @@
+name: Sanity test for Auto eFNOL - PROD
+
+on:
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: eFNOLAutoUI-sanity
+
+env:
+  PASSWORD: ${{secrets.QA_USER_PASSWORD}}
+  USER_PROD: ${{secrets.USER_PROD}}
+  OKTA_AUTHSERVER_ID_PROD: ${{secrets.OKTA_AUTHSERVER_ID_PROD}}
+  OKTA_CLIENT_ID_PROD: ${{secrets.OKTA_CLIENT_ID_PROD}}
+  OKTA_CLIENT_SECRET_PROD: ${{secrets.OKTA_CLIENT_SECRET_PROD}}
+  QA_ENT_AXE_API_KEY: ${{secrets.QA_ENT_AXE_API_KEY}}
+  ORG_ID: ${{secrets.QA_AXE_ORG_ID}}
+  SLACK_TOKEN: ${{secrets.QA_SLACK_TOKEN}}
+  NPM_TOKEN: ${{secrets.GITHUB_TOKEN }}
+  ENTERPRISE_NPM_TOKEN: ${{secrets.ENTERPRISE_NPM_TOKEN}}
+  AXE_TOKEN: ${{ secrets.QA_ENT_AXE_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: ./tests/ui
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies using a safe clean install
+        run: npm install
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Sanity Test eFNOL UI Auto in Prod
+        run: npm run sanity-eFNOLUI-auto-prod
+
+      - name: Upload eFNOL API test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: tests/ui/htmlreports/
+          retention-days: 14

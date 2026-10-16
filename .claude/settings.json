@@ -1,0 +1,96 @@
+{
+  "description": "Project settings — customize for your project",
+  "model": "sonnet",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(cat *)",
+      "Bash(pwd)",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git branch *)",
+      "Bash(git add *)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(git show *)",
+      "Bash(git blame *)",
+      "Bash(yarn *)",
+      "Bash(node *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(python3 *)",
+      "Bash(python *)",
+      "Bash(mkdir *)",
+      "Bash(mv *)",
+      "Bash(cp *)",
+      "Bash(touch *)",
+      "Bash(gh pr *)",
+      "Bash(gh issue *)",
+      "Bash(gh run *)",
+      "Bash(gh api *)",
+      "Bash(gh auth *)",
+      "Bash(curl *)",
+      "Bash(snyk *)",
+      "Bash(wizcli *)",
+      "Bash(jq *)",
+      "Bash(echo *)",
+      "Bash(which *)",
+      "Bash(sdd *)",
+      "Bash(acli jira *)",
+      "Bash(acli auth *)",
+      "Bash(rm -rf ./dist)",
+      "Bash(rm -rf ./node_modules)"
+    ],
+    "deny": [
+      "Bash(git reset --hard*)",
+      "Bash(git push --force*)",
+      "Bash(rm -rf /)",
+      "Bash(rm -rf ~*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-bash.sh \"$CLAUDE_TOOL_INPUT_FILE_PATH\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/sdd-guard.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/format-check.sh \"$CLAUDE_TOOL_INPUT_FILE_PATH\""
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "TZ": "America/Los_Angeles",
+    "NODE_ENV": "development",
+    "CI": "false"
+  }
+}

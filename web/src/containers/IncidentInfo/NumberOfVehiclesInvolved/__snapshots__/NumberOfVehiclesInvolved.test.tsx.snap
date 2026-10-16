@@ -1,0 +1,326 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NumberOfVehiclesInvolved > should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <h5
+        class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+      >
+        Not counting your vehicle, how many other cars were involved?
+      </h5>
+      <form
+        autocomplete="off"
+        class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+        data-quid="SCL-Box"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root SclFormControl SCL-RadioGroup MuiRadioGroup-FormControl MuiRadioGroup-FormControl-Layout-column undefined css-13fx24z-MuiFormControl-root"
+          data-quid="SCL-FormControl"
+        >
+          <label
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiRadioGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+            id=":r1:"
+          >
+            Select one
+          </label>
+          <div
+            aria-labelledby=":r1:"
+            class="MuiFormGroup-root MuiRadioGroup-root MuiRadioGroup-root MuiRadioGroup-Layout-column MuiRadioGroup-gutter css-ht89z8-MuiFormGroup-root"
+            role="radiogroup"
+          >
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+            >
+              <span
+                class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  id="no-vehicles"
+                  name=":r2:"
+                  type="radio"
+                  value="none"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                  data-quid="SCL-RadioTypography"
+                >
+                  No other vehicles were involved
+                </p>
+              </div>
+            </label>
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+            >
+              <span
+                class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  id="one-vehicle"
+                  name=":r2:"
+                  type="radio"
+                  value="one"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                  data-quid="SCL-RadioTypography"
+                >
+                  1 vehicle
+                </p>
+              </div>
+            </label>
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+            >
+              <span
+                class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  id="two-or-more-vehicles"
+                  name=":r2:"
+                  type="radio"
+                  value="two or more"
+                />
+                <svg
+                  class="SCL-Icon SclIcon undefined"
+/>
+              </span>
+              <div
+                class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+                data-quid="SCL-Stack"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                  data-quid="SCL-RadioTypography"
+                >
+                  2 or more
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div
+          class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+          data-quid="SCL-Box"
+        >
+          <button
+            aria-disabled="true"
+            class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            id="next-button"
+            tabindex="-1"
+            type="submit"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <h5
+      class="MuiTypography-root MuiTypography-h5Medium SclTypography css-1cunq96-MuiTypography-root"
+    >
+      Not counting your vehicle, how many other cars were involved?
+    </h5>
+    <form
+      autocomplete="off"
+      class="SclBox SclForm MuiForm-root MuiBox-root css-pczszr"
+      data-quid="SCL-Box"
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root SclFormControl SCL-RadioGroup MuiRadioGroup-FormControl MuiRadioGroup-FormControl-Layout-column undefined css-13fx24z-MuiFormControl-root"
+        data-quid="SCL-FormControl"
+      >
+        <label
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary SclFormLabel MuiRadioGroupFormLabel css-1uiykm1-MuiFormLabel-root"
+          id=":r1:"
+        >
+          Select one
+        </label>
+        <div
+          aria-labelledby=":r1:"
+          class="MuiFormGroup-root MuiRadioGroup-root MuiRadioGroup-root MuiRadioGroup-Layout-column MuiRadioGroup-gutter css-ht89z8-MuiFormGroup-root"
+          role="radiogroup"
+        >
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                id="no-vehicles"
+                name=":r2:"
+                type="radio"
+                value="none"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                data-quid="SCL-RadioTypography"
+              >
+                No other vehicles were involved
+              </p>
+            </div>
+          </label>
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                id="one-vehicle"
+                name=":r2:"
+                type="radio"
+                value="one"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                data-quid="SCL-RadioTypography"
+              >
+                1 vehicle
+              </p>
+            </div>
+          </label>
+          <label
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd SclFormControlLabel SclRadio MuiRadio-FormControlLabel MuiRadio-FormControlLabel-Variant-outlined undefined css-1ez2iz4-MuiFormControlLabel-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary MuiRadioVariant-outlined css-1yp02ru-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+            >
+              <input
+                class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                id="two-or-more-vehicles"
+                name=":r2:"
+                type="radio"
+                value="two or more"
+              />
+              <svg
+                class="SCL-Icon SclIcon undefined"
+/>
+            </span>
+            <div
+              class="MuiStack-root SclStack MuiRadio-LabelStack css-vu7pr9-MuiStack-root"
+              data-quid="SCL-Stack"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-b1Regular SclTypography SclRadioTypography MuiRadio-Typography-root MuiRadio-Typography-Variant-regular css-cfm9y6-MuiTypography-root"
+                data-quid="SCL-RadioTypography"
+              >
+                2 or more
+              </p>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="SclBox MuiButtonGroup-root MuiButtonGroup-Variant-fullWidth SclButtonGroup MuiBox-root css-9wg1aj"
+        data-quid="SCL-Box"
+      >
+        <button
+          aria-disabled="true"
+          class="MuiButtonBase-root Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth SclButton undefined css-10r60qb-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          id="next-button"
+          tabindex="-1"
+          type="submit"
+        >
+          Next
+        </button>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

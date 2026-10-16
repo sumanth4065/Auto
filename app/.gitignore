@@ -1,0 +1,14 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+
+!webpack*.config.js
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+# nexusiq
+nexusiq
+# fortify
+fortify

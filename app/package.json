@@ -1,0 +1,30 @@
+{
+  "name": "@app/infrastructure",
+  "version": "0.1.0",
+  "bin": {
+    "app": "bin/app.js"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "aws-cdk": "^2.1137.0",
+    "ts-node": "10.9.1",
+    "ts-loader": "9.3.1",
+    "typescript": "^5.9.3",
+    "esbuild": "0.20.2"
+  },
+  "dependencies": {
+    "@ace-clublabs/aws-cdk-codepipeline": "^10.0.5",
+    "@ace-clublabs/aws-cdk-helper": "^10.0.4",
+    "@ace-clublabs/aws-tags": "^10.1.12",
+    "@lib/common-utils": "*",
+    "aws-cdk-lib": "^2.265.0",
+    "constructs": "^10.6.0",
+    "source-map-support": "0.5.21"
+  }
+}

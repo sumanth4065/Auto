@@ -1,0 +1,16 @@
+# .github/dependabot.yml
+version: 2
+registries:
+  github-packages:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{secrets.ENTERPRISE_NPM_TOKEN}}
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    registries:
+      - github-packages
+    allow:
+      - dependency-name: "@ace-clublabs/claude-plugin"

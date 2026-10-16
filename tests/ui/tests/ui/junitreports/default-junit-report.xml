@@ -1,0 +1,1919 @@
+<testsuites id="" name="" tests="32" failures="0" skipped="8" errors="1" time="1326.36631">
+<testsuite name="AutoeFNOLWithLoginTestCases.spec.ts" timestamp="2026-09-25T12:58:30.720Z" hostname="RegressionEFNOLWithLoginHUON" tests="32" failures="0" skipped="8" time="1895.793" errors="1">
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16188 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Rear-end- No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="84.908">
+<properties>
+<property name="test_key" value="ISS-16188">
+</property>
+</properties>
+<system-out>
+<![CDATA[[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA039508003
+[CommonTestData] Working HUON user: 004_A1_1747685524@aaa.com (policy CAA039508003)
+Running Auto EFNOL Scripts for 004_A1_1747685524@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA039508003
+6af5fa8f-9073-4108-9fb5-fce19bcb9fda
+Auto Policy Number is: CAA039508003
+Running ISS-16188 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Rear-end- No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 05/10/2026, Time: 06:29PM
+Generated date: 05/10/2026, time: 06:29PM
+No option matched generated time "06:29PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Rear-end
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additonaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting No Other Vehicle Involved option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252428
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16189 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s)- Intersection - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="70.304">
+<properties>
+<property name="test_key" value="ISS-16189">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16189 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s)- Intersection - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 04/29/2026, Time: 06:30PM
+Generated date: 04/29/2026, time: 06:30PM
+No option matched generated time "06:30PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Intersection
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select No to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252431
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16190 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with an animal - No Other Vehicle Involved - Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="62.218">
+<properties>
+<property name="test_key" value="ISS-16190">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16190 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with an animal - No Other Vehicle Involved - Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 07/04/2026, Time: 06:31PM
+Generated date: 07/04/2026, time: 06:31PM
+No option matched generated time "06:31PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with an animal
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additonaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting No Other Vehicle Involved option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252432
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16191 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with a fixed object or structure - 1 vehicle involved - No Injured - Pedestrian - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="99.868">
+<properties>
+<property name="test_key" value="ISS-16191">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16191 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with a fixed object or structure - 1 vehicle involved - No Injured - Pedestrian - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/05/2026, Time: 06:32PM
+Generated date: 08/05/2026, time: 06:32PM
+No option matched generated time "06:32PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with a fixed object or structure
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select No to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Pedestrian
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252434
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16192 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Damaged by weather - Flood/Water - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="69.42">
+<properties>
+<property name="test_key" value="ISS-16192">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16192 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Damaged by weather - Flood/Water - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 05/17/2026, Time: 06:34PM
+Generated date: 05/17/2026, time: 06:34PM
+No option matched generated time "06:34PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Damaged by weather
+Selected option - Flood/water
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additonaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting No Other Vehicle Involved option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252436
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="234.39">
+<properties>
+<property name="test_key" value="ISS-16193">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6af5fa8f-9073-4108-9fb5-fce19bcb9fda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/17/2026, Time: 06:35PM
+Generated date: 08/17/2026, time: 06:35PM
+No option matched generated time "06:35PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw  did not run as expected!
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON/test-failed-1.png]]
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON/error-context.md]]
+[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA032246127
+[CommonTestData] Working HUON user: 004_A1_1758298775@aaa.com (policy CAA032246127)
+Running Auto EFNOL Scripts for 004_A1_1758298775@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA032246127
+49cef5af-ef41-4193-968a-1f5de39fceda
+Auto Policy Number is: CAA032246127
+Running ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/49cef5af-ef41-4193-968a-1f5de39fceda?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 06/14/2026, Time: 06:36PM
+Generated date: 06/14/2026, time: 06:36PM
+No option matched generated time "06:36PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Rollover
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw  did not run as expected!
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON-retry1/test-failed-1.png]]
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON-retry1/error-context.md]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[[
+  {
+    message: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m,
+    stack: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m +
+      [32m'\n'[39m +
+      [32m'    at WhoIsReportingPage.waitForElementAttached (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:43:21)\n'[39m +
+      [32m'    at WhoIsReportingPage.verifyElementContainsText (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:117:16)\n'[39m +
+      [32m'    at WhoIsReportingPage.efValidateWhoIsReportingPageDisplay (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/pages/pageRepository/WhoIsReportingPage.ts:18:16)\n'[39m +
+      [32m'    at ReporterVehicleDriverWorkflow.selectingReporterVehicleDriver (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/WorkFlows/ReporterVehicleDriverWorkflow.ts:57:33)\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:297:4\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:296:3'[39m,
+    cause: [90mundefined[39m
+  }
+]
+[
+  {
+    message: [32m'\x1B[31mTest timeout of 180000ms exceeded.\x1B[39m'[39m,
+    stack: [32m'\x1B[31mTest timeout of 180000ms exceeded.\x1B[39m'[39m,
+    cause: [90mundefined[39m
+  }
+]
+]]>
+</system-err>
+<error message="page.waitForSelector: Timeout 20000ms exceeded." type="TimeoutError">
+<![CDATA[  [RegressionEFNOLWithLoginHUON] › AutoeFNOLWithLoginTestCases.spec.ts:275:6 › Auto eFNOL With Login TestCases: › ISS-16193 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Rollover - option  - 1 vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw  › File claim for Driven - Rollover 
+
+    TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.
+    Call log:
+      - waiting for locator('//h5[contains(text(),\'Who is reporting\')]') to be visible
+
+
+       at ../lib/TestBase.ts:43
+
+      41 |
+      42 |   async waitForElementAttached(plocator: string) {
+    > 43 |     await this.page.waitForSelector(plocator);
+         |                     ^
+      44 |     //await this.page.waitForSelector('text=Sign in',{state:'visible'});
+      45 |   }
+      46 |
+        at WhoIsReportingPage.waitForElementAttached (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:43:21)
+        at WhoIsReportingPage.verifyElementContainsText (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:117:16)
+        at WhoIsReportingPage.efValidateWhoIsReportingPageDisplay (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/pages/pageRepository/WhoIsReportingPage.ts:18:16)
+        at ReporterVehicleDriverWorkflow.selectingReporterVehicleDriver (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/WorkFlows/ReporterVehicleDriverWorkflow.ts:57:33)
+        at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:297:4
+        at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:296:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON/error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Test timeout of 180000ms exceeded.
+
+    Error: page.waitForLoadState: Test timeout of 180000ms exceeded.
+
+       at ../pages/pageRepository/WhoWasDrivingPage.ts:32
+
+      30 |         await this.clickElement(this.whoWasDrivingPageObjects.SELECTFIRSTOPTION);
+      31 |         await this.clickElement(this.whoWasDrivingPageObjects.NEXTBUTTON);
+    > 32 |         await this.page.waitForLoadState('networkidle');
+         |                         ^
+      33 |         break;
+      34 |       case "Driver not listed":
+      35 |         await this.clickElement(this.whoWasDrivingPageObjects.SELECTDRIVERNOTLISTED);
+        at WhoWasDrivingPage.efNavigatetoNumberOfVehiclesInvolved (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/pages/pageRepository/WhoWasDrivingPage.ts:32:25)
+        at ReporterVehicleDriverWorkflow.selectingReporterVehicleDriver (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/WorkFlows/ReporterVehicleDriverWorkflow.ts:110:3)
+        at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:297:4
+        at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:296:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/AutoeFNOLWithLoginTestCase-5a2e0-trian---NoWitness--huon-gw--RegressionEFNOLWithLoginHUON-retry1/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16194 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with a pedestrian or cyclist option  - 2 or more vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="63.615">
+<properties>
+<property name="test_key" value="ISS-16194">
+</property>
+</properties>
+<system-out>
+<![CDATA[[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA023699274
+[CommonTestData] Working HUON user: 004_A1_1738608290@aaa.com (policy CAA023699274)
+Running Auto EFNOL Scripts for 004_A1_1738608290@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA023699274
+74413773-82c5-42c4-aeb6-2ec5bdcf44f9
+Auto Policy Number is: CAA023699274
+Running ISS-16194 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with a pedestrian or cyclist option  - 2 or more vehicle involved - No Injured - Pedestrian - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/07/2026, Time: 06:39PM
+Generated date: 08/07/2026, time: 06:39PM
+No option matched generated time "06:39PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with a pedestrian or cyclist
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Pedestrian
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252441
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16195 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Hit by another vehicle - 1 vehicle involved - Cyclist - NoWitness-  @huon " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="60.562">
+<properties>
+<property name="test_key" value="ISS-16195">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16195 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Hit by another vehicle - 1 vehicle involved - Cyclist - NoWitness-  @huon 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 07/14/2026, Time: 06:40PM
+Generated date: 07/14/2026, time: 06:40PM
+No option matched generated time "06:40PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Hit by another vehicle
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select No to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Cyclist
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252442
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16196 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Damaged by weather - Wind - Cyclist - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="66.683">
+<properties>
+<property name="test_key" value="ISS-16196">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16196 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Damaged by weather - Wind - Cyclist - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 07/17/2026, Time: 06:41PM
+Generated date: 07/17/2026, time: 06:41PM
+No option matched generated time "06:41PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Damaged by weather
+Selected option - Wind
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Cyclist
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252443
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16197 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Rolled away - Cyclist - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="63.823">
+<properties>
+<property name="test_key" value="ISS-16197">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16197 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Rolled away - Cyclist - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 04/17/2026, Time: 06:42PM
+Generated date: 04/17/2026, time: 06:42PM
+No option matched generated time "06:42PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Cyclist
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252444
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16198 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Struck by a flying or falling object - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="61.507">
+<properties>
+<property name="test_key" value="ISS-16198">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16198 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Struck by a flying or falling object - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 05/15/2026, Time: 06:43PM
+Generated date: 05/15/2026, time: 06:43PM
+No option matched generated time "06:43PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Pedestrian
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252445
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16199 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Vandalized - Pedestrian - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="121.32">
+<properties>
+<property name="test_key" value="ISS-16199">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16199 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Vandalized - Pedestrian - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/74413773-82c5-42c4-aeb6-2ec5bdcf44f9?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/17/2026, Time: 06:44PM
+Generated date: 08/17/2026, time: 06:44PM
+No option matched generated time "06:44PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+ISS-16199 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Vandalized - Pedestrian - WithWitness-  @huon @gw  did not run as expected!
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-57cef-ian---WithWitness--huon-gw--RegressionEFNOLWithLoginHUON/test-failed-1.png]]
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-57cef-ian---WithWitness--huon-gw--RegressionEFNOLWithLoginHUON/error-context.md]]
+[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA091937072
+[CommonTestData] Working HUON user: 004_A1_1747686751@aaa.com (policy CAA091937072)
+Running Auto EFNOL Scripts for 004_A1_1747686751@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA091937072
+67c76f01-43a2-45bd-8f78-e6d0242f42a1
+Auto Policy Number is: CAA091937072
+Running ISS-16199 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Vandalized - Pedestrian - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/67c76f01-43a2-45bd-8f78-e6d0242f42a1?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 09/14/2026, Time: 06:46PM
+Generated date: 09/14/2026, time: 06:46PM
+No option matched generated time "06:46PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Vandalized
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Pedestrian
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252446
+]]>
+</system-out>
+<system-err>
+<![CDATA[[
+  {
+    message: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m,
+    stack: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m +
+      [32m'\n'[39m +
+      [32m'    at WhoIsReportingPage.waitForElementAttached (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:43:21)\n'[39m +
+      [32m'    at WhoIsReportingPage.verifyElementContainsText (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:117:16)\n'[39m +
+      [32m'    at WhoIsReportingPage.efValidateWhoIsReportingPageDisplay (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/pages/pageRepository/WhoIsReportingPage.ts:18:16)\n'[39m +
+      [32m'    at ReporterVehicleDriverWorkflow.selectingReporterVehicleDriverForParked (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/WorkFlows/ReporterVehicleDriverWorkflow.ts:187:43)\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:604:4\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:603:3'[39m,
+    cause: [90mundefined[39m
+  }
+]
+]]>
+</system-err>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16200 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Stolen - 2 more vehicles involved - NoPedestrianNoCyclist - NOWitness-  @huon" classname="AutoeFNOLWithLoginTestCases.spec.ts" time="57.474">
+<properties>
+<property name="test_key" value="ISS-16200">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16200 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Stolen - 2 more vehicles involved - NoPedestrianNoCyclist - NOWitness-  @huon
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/67c76f01-43a2-45bd-8f78-e6d0242f42a1?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/01/2026, Time: 06:47PM
+Generated date: 08/01/2026, time: 06:47PM
+No option matched generated time "06:47PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252447
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16201 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Invloved in fire -  NoPedestrianNoCyclist - NOWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="58.67">
+<properties>
+<property name="test_key" value="ISS-16201">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16201 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Invloved in fire -  NoPedestrianNoCyclist - NOWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/67c76f01-43a2-45bd-8f78-e6d0242f42a1?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 06/23/2026, Time: 06:48PM
+Generated date: 06/23/2026, time: 06:48PM
+No option matched generated time "06:48PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Involved in a fire
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252448
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16202 - AutoEFNOL With Login - Damage Selection - Reporter Not Listed -  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="59.016">
+<properties>
+<property name="test_key" value="ISS-16202">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16202 - AutoEFNOL With Login - Damage Selection - Reporter Not Listed -  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/67c76f01-43a2-45bd-8f78-e6d0242f42a1?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 04/01/2026, Time: 06:49PM
+Generated date: 04/01/2026, time: 06:49PM
+No option matched generated time "06:49PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter not listed
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Involved in a fire
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252449
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16203 - AutoEeFNOL With Login - Damage Selection - Vehicle Not listed -  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="59.153">
+<properties>
+<property name="test_key" value="ISS-16203">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16203 - AutoEeFNOL With Login - Damage Selection - Vehicle Not listed -  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/67c76f01-43a2-45bd-8f78-e6d0242f42a1?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 05/09/2026, Time: 06:50PM
+Generated date: 05/09/2026, time: 06:50PM
+No option matched generated time "06:50PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle Not Listed Option
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Involved in a fire
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252450
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16204 - AutoEFNOL With Login - Damage Selection - Driven Case - Impact with pedestrian or cyclist option - Driver Not Found - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="80.037">
+<properties>
+<property name="test_key" value="ISS-16204">
+</property>
+</properties>
+<system-out>
+<![CDATA[[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA025684199
+[CommonTestData] Working HUON user: 004_A1_1734128799@aaa.com (policy CAA025684199)
+Running Auto EFNOL Scripts for 004_A1_1734128799@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA025684199
+6e577a42-d3d8-40b8-ae1c-3c9a3cee5984
+Auto Policy Number is: CAA025684199
+Running ISS-16204 - AutoEFNOL With Login - Damage Selection - Driven Case - Impact with pedestrian or cyclist option - Driver Not Found - @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 09/03/2026, Time: 06:29PM
+Generated date: 09/03/2026, time: 06:29PM
+No option matched generated time "06:29PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with a pedestrian or cyclist
+Navigated to Driver Page.. Selected required Driver
+Adding new driver as driver is not listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 2 vehicles option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = No
+Select No to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252429
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16205 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Invloved in fire - Edit from Review page and Submit claim -  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16206 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Damaged by weather - Hail - Cyclist - WithWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="72.051">
+<properties>
+<property name="test_key" value="ISS-16206">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16206 - AutoEFNOL With Login - All other Damage Selection - Parked Case - Damaged by weather - Hail - Cyclist - WithWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 06/17/2026, Time: 06:30PM
+Generated date: 06/17/2026, time: 06:30PM
+No option matched generated time "06:30PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Select Parked Option
+Selected Parked Option
+Navigated to parkedwhathappened Page
+Selected option Damaged by weather
+Selected option - Hail
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Cyclist
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252430
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16207 - AutoEFNOL With Login - Glass only Damage Selection Redirect to Safelite page - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="24.832">
+<properties>
+<property name="test_key" value="ISS-16207">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16207 - AutoEFNOL With Login - Glass only Damage Selection Redirect to Safelite page - @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to File A Claim Page
+Navigated to Claim Type Page
+Selecting Glass Damage Option
+✅ Redirected to Safelite
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16209 - AutoEFNOL With Login - All other Damage Selection - Driven Case - struck by a falling or flying object - 1 vehicle - Cyclist - WithWitness-  @huon " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="100.241">
+<properties>
+<property name="test_key" value="ISS-16209">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16209 - AutoEFNOL With Login - All other Damage Selection - Driven Case - struck by a falling or flying object - 1 vehicle - Cyclist - WithWitness-  @huon 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 08/28/2026, Time: 06:31PM
+Generated date: 08/28/2026, time: 06:31PM
+No option matched generated time "06:31PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Struck by a falling or flying object
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select Yes for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select Yes to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Select Cyclist
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252433
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16210 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Turning - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw" classname="AutoeFNOLWithLoginTestCases.spec.ts" time="69.427">
+<properties>
+<property name="test_key" value="ISS-16210">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16210 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Turning - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 03/31/2026, Time: 06:33PM
+Generated date: 03/31/2026, time: 06:33PM
+No option matched generated time "06:33PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Turning
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additonaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting No Other Vehicle Involved option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252435
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16211 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Lane Change - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="68.365">
+<properties>
+<property name="test_key" value="ISS-16211">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16211 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Lane Change - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 07/13/2026, Time: 06:34PM
+Generated date: 07/13/2026, time: 06:34PM
+No option matched generated time "06:34PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Lane change
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select No to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252437
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16212 -AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Hit and run - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw" classname="AutoeFNOLWithLoginTestCases.spec.ts" time="119.617">
+<properties>
+<property name="test_key" value="ISS-16212">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16212 -AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Hit and run - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/6e577a42-d3d8-40b8-ae1c-3c9a3cee5984?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 06/28/2026, Time: 06:35PM
+Generated date: 06/28/2026, time: 06:35PM
+No option matched generated time "06:35PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+ISS-16212 -AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Hit and run - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw did not run as expected!
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-831da-yclist---NoWitness--huon-gw-RegressionEFNOLWithLoginHUON/test-failed-1.png]]
+
+[[ATTACHMENT|../../../test-results/AutoeFNOLWithLoginTestCase-831da-yclist---NoWitness--huon-gw-RegressionEFNOLWithLoginHUON/error-context.md]]
+[CommonTestData] Source artifact: test-data_082426
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA217411001
+[CommonTestData] Working HUON user: 004_A1_1737549541@aaa.com (policy CAA217411001)
+Running Auto EFNOL Scripts for 004_A1_1737549541@aaa.com in A1 region
+Running Project  RegressionEFNOLWithLoginHUON
+Successfully retrieved the OKTA token.
+policy number from com fun = CAA217411001
+16e7dd46-660b-4890-b4e8-eef963aa7a2d
+Auto Policy Number is: CAA217411001
+Running ISS-16212 -AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Hit and run - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/16e7dd46-660b-4890-b4e8-eef963aa7a2d?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 06/30/2026, Time: 06:36PM
+Generated date: 06/30/2026, time: 06:36PM
+No option matched generated time "06:36PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Hit and run
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additonaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting No Other Vehicle Involved option
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252439
+]]>
+</system-out>
+<system-err>
+<![CDATA[[
+  {
+    message: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m,
+    stack: [32m'TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n'[39m +
+      [32m'Call log:\n'[39m +
+      [32m"\x1B[2m  - waiting for locator('//h5[contains(text(),\\'Who is reporting\\')]') to be visible\x1B[22m\n"[39m +
+      [32m'\n'[39m +
+      [32m'    at WhoIsReportingPage.waitForElementAttached (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:43:21)\n'[39m +
+      [32m'    at WhoIsReportingPage.verifyElementContainsText (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/lib/TestBase.ts:117:16)\n'[39m +
+      [32m'    at WhoIsReportingPage.efValidateWhoIsReportingPageDisplay (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/pages/pageRepository/WhoIsReportingPage.ts:18:16)\n'[39m +
+      [32m'    at ReporterVehicleDriverWorkflow.selectingReporterVehicleDriver (/Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/WorkFlows/ReporterVehicleDriverWorkflow.ts:57:33)\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:1234:4\n'[39m +
+      [32m'    at /Users/sumanth/AutoTestData/insurance-self-service_insuranceclaims_auto-efnol-without-login/tests/ui/tests/AutoeFNOLWithLoginTestCases.spec.ts:1233:3'[39m,
+    cause: [90mundefined[39m
+  }
+]
+]]>
+</system-err>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-16213 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Backing - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts" time="68.292">
+<properties>
+<property name="test_key" value="ISS-16213">
+</property>
+</properties>
+<system-out>
+<![CDATA[Running ISS-16213 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Backing - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw 
+Navigating to Homepage
+https://appuat1.ace.aaa.com/insurance/auto/file-a-claim/behindlogin/16e7dd46-660b-4890-b4e8-eef963aa7a2d?clubCode=CA
+Page Title is: AAA | Auto EFNOL
+Entering zip code = 92626
+Entered zip code
+clicked on go button
+clicked on ask me later button
+Navigated to Claim type
+selecting Claim type
+Selecting All other damage Option
+Navigated to Transition Page
+Navigated to  When Accident Page
+Attempt 1 to enter accident date/time
+Test Data Created -> Date: 04/10/2026, Time: 06:38PM
+Generated date: 04/10/2026, time: 06:38PM
+No option matched generated time "06:38PM". Falling back to first available option.
+No duplicate popup detected. Successfully entered accident date/time on attempt 1.
+Navigated to Where Accident Page
+Navigated to ClaimReporter Page
+Selecting Reporter1 from List 
+Navigated to Contact Info Page
+started verifying the content in contact info page
+completed... verifying the content in contact info page
+Navigated to Car Damage Transition Page
+Navigated to carinvolved Page
+Selecting Vehicle1 from List
+Navigated to carkineticstatus Page
+Selected Driven Option
+Navigated to drivenwhathappened Page
+Selected option - Impact with other vehicle(s)
+Selected option - Backing
+Navigated to Driver Page.. Selected required Driver
+Selected Driver already listed
+Navigated to Passenger Page
+No Passengers
+Navigated to Injured Page
+Select No for Anyone Injured
+Navigated to Additionaldetails Page
+Navigated to Towed Page
+Select Yes for Vehicle Towed
+Navigated to VehicleDamage Page
+Navigated to Number Of Vehicles Involved Number Page
+Seleting 1 vehicle option
+Navigated to otherpartyinformationtransition Page
+Navigated to yearmakemodel Page
+Navigated to otherpartyinsuranceinfo Page
+Navigated to otherpartyvehicledriverinfo Page
+Navigated to otherpartypassengers Page
+No Passengers
+Navigated to otherpartyinjuredcheck Page
+Select No to Other party anyone injured
+Navigated to additionaldetails Page
+Navigated to pedestrianorcyclistinvolved Page
+Navigated to witnessinfo Page
+Navigated to additionalpropertydamage Page
+verified heaer addition details page passed opition = Yes
+Select Yes to Additional property damage
+About to click next button for property damage page
+Next button is visible
+Successfully navigated to accident review
+Navigated to accidentreview Page
+Navigated to confirmation Page
+002252440
+]]>
+</system-out>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17471 - AutoEFNOL With Login - Damage Selection - Verify Existing Claim - Driven Case - Impact with other vehicle(s) - Backing - 1Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness-  @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17401 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Damaged by weather - Wind - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17402 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Damaged by weather - Hail - No Other Vehicle Involved - No Injured - NoPedestrianNoCyclist - NoWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17403 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Impact with other vehicle(s) - Rear-end - 1 Vehicle Involved - Pedestrian - WithWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17404 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Vehicle Not Listed - Impact with other vehicle(s) - Rear-end - No Other Vehicle - NoWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17405 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Driver Not Listed - Impact with other vehicle(s) - Rear-end - No Other Vehicle - NoWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Auto eFNOL With Login TestCases: › ISS-17406 - AutoEFNOL With Login - All other Damage Selection - Driven Case - Someone Else Reporter - Impact with other vehicle(s) - Intersection - 1 Vehicle - 1 Passenger - Cyclist - WithWitness - @huon @gw " classname="AutoeFNOLWithLoginTestCases.spec.ts">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

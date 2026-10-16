@@ -1,0 +1,149 @@
+name: Sanity test for Auto eFNOL Without Login - UI
+
+on:
+  schedule:
+    - cron: '0 3 * * 2,4' # Tuesday & Thursday 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'Select an environment to run Sanity'
+        required: true
+        default: 'uat1'
+        type: choice
+        options:
+          - uat1
+          - uat2
+      firstname:
+        description: 'First Name'
+        default: 'CLAIRE'
+        type: string
+      lastname:
+        description: 'Last Name'
+        default: 'ACTUARIAL'
+        type: string
+      policynumber:
+        description: 'Policy Number'
+        default: 'RIA000044587'
+        type: string
+      zipcode:
+        description: 'Zip Code'
+        default: '02837'
+        type: string
+      existingClaimDate:
+        description: 'Existing Claim Date'
+        required: true
+        default: '05/21/2026'
+        type: string
+
+  repository_dispatch:
+    types: eFNOLAutoUI-sanity
+
+env:
+  PASSWORD: ${{secrets.QA_USER_PASSWORD}}
+  USER_PROD: ${{secrets.USER_PROD}}
+  OKTA_AUTHSERVER_ID_PROD: ${{secrets.OKTA_AUTHSERVER_ID_PROD}}
+  OKTA_CLIENT_ID_PROD: ${{secrets.OKTA_CLIENT_ID_PROD}}
+  OKTA_CLIENT_SECRET_PROD: ${{secrets.OKTA_CLIENT_SECRET_PROD}}
+  QA_ENT_AXE_API_KEY: ${{secrets.QA_ENT_AXE_API_KEY}}
+  ORG_ID: ${{secrets.QA_AXE_ORG_ID}}
+  SLACK_TOKEN: ${{secrets.QA_SLACK_TOKEN}}
+  NPM_TOKEN: ${{ secrets.GH_TEAMS_TOKEN }}
+  ENTERPRISE_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  AXE_TOKEN: ${{ secrets.QA_ENT_AXE_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: ./tests/ui
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies using a safe clean install
+        run: npm install
+
+      - name: Install Playwright
+        run: npx playwright install
+
+      - name: Pull common test data from qa-automation-common
+        env:
+          GH_TOKEN: ${{ secrets.CROSS_REPO_PAT }}
+          SRC_REPO: ACE-Clublabs/qa-automation-common
+          SRC_WORKFLOW: Test Data Pull
+          DEST: testdata/common
+        run: |
+          set -euo pipefail
+          mkdir -p "$DEST"
+          run_ids=$(gh run list --repo "$SRC_REPO" --workflow "$SRC_WORKFLOW" \
+            --limit 15 --json databaseId --jq '.[].databaseId')
+          if [ -z "$run_ids" ]; then
+            echo "::error::No successful '$SRC_WORKFLOW' runs found in $SRC_REPO"; exit 1
+          fi
+          found=""
+          for rid in $run_ids; do
+            echo "Trying Test Data Pull run $rid ..."
+            rm -rf "${DEST:?}/"* || true
+            if gh run download "$rid" --repo "$SRC_REPO" --dir "$DEST" >/dev/null 2>&1; then
+              if find "$DEST" -type f -path '*/products/autoHuon.json' | grep -q . \
+                 || find "$DEST" -type f -path '*/products/autoGw.json' | grep -q .; then
+                echo "Using run $rid (products/ present)."
+                echo "Artifact(s) pulled from run $rid:"
+                ls -1 "$DEST"
+                found="$rid"; break
+              fi
+              echo "Run $rid downloaded but has no products/ folder; trying next."
+            else
+              echo "No downloadable artifact for run $rid; trying next."
+            fi
+          done
+          if [ -z "$found" ]; then
+            echo "::error::No recent Test Data Pull artifact contained products/. Aborting."; exit 1
+          fi
+
+      - name: Sanity Test eFNOL UI Auto in UAT1
+        if: ${{ github.event.inputs.env == 'uat1' }}
+        run: npm run sanity-eFNOLUI-auto-without-login-uat1
+        env:
+          TEST_FIRSTNAME: ${{ github.event.inputs.firstname }}
+          TEST_LASTNAME: ${{ github.event.inputs.lastname }}
+          TEST_POLICYNUMBER: ${{ github.event.inputs.policynumber }}
+          TEST_ZIPCODE: ${{ github.event.inputs.zipcode }}
+          TEST_EXISTINGCLAIM: ${{github.event.inputs.existingClaimDate}}
+
+
+      - name: Sanity Test eFNOL UI Auto in UAT2
+        if: ${{ github.event.inputs.env == 'uat2' }}
+        run: npm run sanity-eFNOLUI-auto-without-login-uat2
+        env:
+          TEST_FIRSTNAME: ${{ github.event.inputs.firstname }}
+          TEST_LASTNAME: ${{ github.event.inputs.lastname }}
+          TEST_POLICYNUMBER: ${{ github.event.inputs.policynumber }}
+          TEST_ZIPCODE: ${{ github.event.inputs.zipcode }}
+          TEST_EXISTINGCLAIM: ${{github.event.inputs.existingClaimDate}}
+
+      - name: Scheduled Sanity - Without Login UAT1 (release sign-off)
+        if: ${{ github.event_name == 'schedule' }}
+        run: npm run sanity-eFNOLUI-auto-without-login-uat1
+        env:
+          TEST_FIRSTNAME: 'CLAIRE'
+          TEST_LASTNAME: 'ACTUARIAL'
+          TEST_POLICYNUMBER: 'RIA000044587'
+          TEST_ZIPCODE: '02837'
+          TEST_EXISTINGCLAIM: '05/21/2026'
+
+      - name: Upload eFNOL API test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: tests/ui/htmlreports/
+          retention-days: 14
